@@ -85,18 +85,6 @@
 	</head>
 	<body>
 		<span class="words">(⊙෴☉)<br>Meanwhile,<br>there's <a href="https://instagram.com/disuye/">this</a>.</span>
-		<div class="nostr">
-			<input type="text" value="npub1fq8gw76dq0438aur27p64pv0dzc2p6c230ee9djeptu74304gvnq7f7df3" id="nostrID">
-			<button onclick="toClipboard()">Copy text</button>
-			<script>
-			 	function toClipboard() {
-  					var copyText = document.getElementById("nostrID");
-					copyText.select();
-  					copyText.setSelectionRange(0, 99999); // For mobile devices
-					navigator.clipboard.writeText(copyText.value);
-					alert("Copied the text: " + copyText.value);
-				}
-			</script>
-		</div>
+		<span class="nostr">npub1fq8gw76dq0438aur27p64pv0dzc2p6c230ee9djeptu74304gvnq7f7df3</span>
 	</body>
 </html>
