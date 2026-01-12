@@ -6,16 +6,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>(⊙෴☉)</title>
 		<style type="text/css">
+			@import url('https://disuye.com/fonts/Fira+Code:wght@100..900&display=swap');
 			body {
 				width: 100vw;
 				height: 100vh;
 				text-align: center; 
 				margin: 0; 
 				padding: 0; 
-				font-family: Courier New; 
-				font-size: 1.1rem; 
+				font-family: "Fira Code", "Courier New"; 
+				font-size: 0.9rem; 
 				font-style: normal;
-				line-height: 1.5rem;
+				font-weight: 100;
+				line-height: 1.4rem;
 				background-color: white;
 				background: url(
 					data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVQYV2O8ffu2LwMDAwMjiAABAC1zAuFbE/raAAAAAElFTkSuQmCC
@@ -26,23 +28,29 @@
 				overflow: hidden;
 				box-shadow: 0px 0px 100px rgba(0,0,0,0.1) inset;
 			}
-			.nostr {
-				display: block;
-				position: absolute;
-				word-wrap:break-word;
-				width: 50%;
-				top: 2%; left: 50%;
-				transform: translate(-50%, 0%) rotateZ(2deg);
+			#icon {
+				height: 128px;
+				width: 128px;
+				background-image: url(./disuye.png);
+				background-position: center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				opacity: 1.0;
+				border-radius: 50%;
 			}
-			.words {
+			#words, #icon {
 				display: block; 
 				position: absolute; 
 				top: 50%; left: 50%;
-  				transform: translate(-50%,-50%) rotateZ(-2deg);
+  				transform: translate(-50%,-50%) rotateZ(-5deg);
 				cursor: default;
 				background-color: transparent;
 			}
-			.words a {
+			#words {
+				margin-top: 128px;
+				max-width: 400px;
+			}
+			#words a {
 				display: inline-block;
 				text-decoration: none; 
 				border-bottom: 0.05rem solid black;
@@ -50,7 +58,7 @@
 				color: black;
 				background-color: transparent;
 			}		
-			.words a:hover {
+			#words a:hover {
 				border-bottom: 0.05rem solid transparent;
 				position: relative;
   				-webkit-transform: scale(0.9, 2.0); /* Safari Chrome */
@@ -93,6 +101,9 @@
 	</head>
 	<body>
 
-		<span class="words">(⊙෴☉)<br>Meanwhile...<br>there's <a href="https://instagram.com/disuye/">Instagram</a> and <a href="https://soundcloud.com/disuye">Soundcloud</a><br><a href="https://open.spotify.com/artist/0UzsRPTcXmGW0TRRLymAzL?si=UfgtLLUyQT6AF054UmYngA">Spotify</a> or <a href="https://tidal.com/artist/3524502/u">Tidal</a></span>
+		<div id="words">(⊙෴☉)<br>Meanwhile...<br><a href="https://instagram.com/disuye/">Instagram</a> and <a href="https://soundcloud.com/disuye">Soundcloud</a>, <a href="http://dan-f.bandcamp.com">BandCamp</a>, <a href="https://open.spotify.com/artist/0UzsRPTcXmGW0TRRLymAzL?si=UfgtLLUyQT6AF054UmYngA">Spotify</a>, <a href="https://tidal.com/artist/3524502/u">Tidal</a> & side-projects <a href="http://smplr.bandcamp.com">SMPLR</a> and <a href="http://dyscopian.bandcamp.com">Dyscopian</a></div>
+
+		<div id="icon"></div>
+
 	</body>
-</html>
+	</html>
