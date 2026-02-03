@@ -43,6 +43,7 @@ body, #background {
 	font-size: 0.9rem;
 	background: white;
 	margin: auto;
+	opacity: 0.9;
 	}
 #yo a {
 	text-decoration: none;
