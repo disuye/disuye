@@ -66,14 +66,20 @@
 					var iv    = null;
 					var coastIv = null;
 
-					var minSpeed = 5;
-					var maxSpeed = 20;
-					var rampTime = 3000;
+					var minSpeed = 1;
+					var maxSpeed = 18;
+					var rampTime = 1500;
 					var startTime = 0;
 					var gap = 6;
 					var currentSpeed = 0;
 					var currentDir = 0;
-					var friction = 0.9;  // per tick — lower = quicker stop
+					var friction = 0.96;
+
+					// touch state
+					var touchStartX = 0;
+					var touchLastX = 0;
+					var touchVelocity = 0;
+					var touchDragging = false;
 
 					document.body.appendChild(lb);
 
@@ -115,6 +121,18 @@
 
 					function stopCoast(){ if(coastIv){ clearInterval(coastIv); coastIv = null; } }
 
+					function coastFrom(speed, dir){
+						stopCoast();
+						var v = Math.abs(speed);
+						if(v < 0.5) return;
+						coastIv = setInterval(function(){
+							v *= friction;
+							if(v < 0.3){ stopCoast(); return; }
+							track.scrollLeft += dir * v;
+							wrapScroll();
+						}, 12);
+					}
+
 					function startScroll(dir){
 						stopCoast();
 						if(iv){ clearInterval(iv); iv = null; }
@@ -131,17 +149,7 @@
 
 					function stopScroll(){
 						if(iv){ clearInterval(iv); iv = null; }
-						// coast with inertia
-						var coastSpeed = currentSpeed;
-						var coastDir = currentDir;
-						if(coastSpeed < 0.5) return;
-						stopCoast();
-						coastIv = setInterval(function(){
-							coastSpeed *= friction;
-							if(coastSpeed < 0.3){ stopCoast(); return; }
-							track.scrollLeft += coastDir * coastSpeed;
-							wrapScroll();
-						}, 12);
+						coastFrom(currentSpeed, currentDir);
 					}
 
 					zL.addEventListener('mouseenter', function(){ startScroll(-1); });
@@ -149,7 +157,38 @@
 					zR.addEventListener('mouseenter', function(){ startScroll(1); });
 					zR.addEventListener('mouseleave', stopScroll);
 
+					// --- touch handling ---
+					track.addEventListener('touchstart', function(e){
+						stopCoast();
+						touchDragging = true;
+						touchStartX = e.touches[0].clientX;
+						touchLastX = touchStartX;
+						touchVelocity = 0;
+					}, {passive: true});
+
+					track.addEventListener('touchmove', function(e){
+						if (!touchDragging) return;
+						var x = e.touches[0].clientX;
+						var dx = touchLastX - x;
+						touchVelocity = dx;
+						touchLastX = x;
+						track.scrollLeft += dx;
+						wrapScroll();
+						e.preventDefault();
+					}, {passive: false});
+
+					track.addEventListener('touchend', function(e){
+						if (!touchDragging) return;
+						touchDragging = false;
+						// swipe inertia — use last velocity
+						var dir = touchVelocity > 0 ? 1 : -1;
+						coastFrom(Math.abs(touchVelocity) * 2, dir);
+					});
+
+					// --- click / lightbox ---
 					track.addEventListener('click', function(e){
+						// suppress click if it was a drag
+						if (Math.abs(touchLastX - touchStartX) > 10) return;
 						if(e.target.tagName === 'IMG'){
 							lbImg.src = e.target.src;
 							lb.classList.add('open');
