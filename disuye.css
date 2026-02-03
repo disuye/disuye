@@ -90,7 +90,7 @@ body, #background {
 	margin-top: -140px;
 	}
 a:hover {
-		border-radius: 15%;
+		border-radius: 5%;
 	}	
 #words a {
 	display: inline-block;
