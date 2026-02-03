@@ -1,4 +1,14 @@
 # disuye.com
-The website, aka disuye.com ... content and purpose still to be decided. 
+The website, aka disuye.com ...
 
-Also a redirect destination for yumla.com until if/when the domain is revived.
+- main links page for Dan F
+
+        ./index.html
+
+- info page for FFAB 
+
+        ./ffab/index.html
+
+More info eventually.
+
+(⊙෴☉)
