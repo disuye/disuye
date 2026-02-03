@@ -35,22 +35,24 @@ body, #background {
 	}
 #yo {
 	display: block;
-	z-index: 0;
+	z-index: 100;
 	position: fixed;
-	top:0; right: 0;
+	bottom:0; right: 0;
 	width: 100vw;
-	padding: 1.0rem 0;
-	background: transparent;
+	padding: 0.0rem 0;
+	font-size: 0.9rem;
+	background: white;
 	margin: auto;
 	}
-#yo span {
-	background-color: transparent;
-}	
+#yo a {
+	text-decoration: none;
+	border: none !important;
+}
 #icon {
 	height: 140px;
 	width: 140px;
 	margin: auto;
-	background-image: url(./disuye.png);
+	background-image: url('./disuye.png');
 	background-color: transparent;
 	background-position: center;
 	background-size: contain;
@@ -60,10 +62,11 @@ body, #background {
 	box-shadow: 0px 0px 80px rgba(0,0,0,0.2);
 	}	
 #icon-ffab {
-	height: 160px;
-	width: 146px;
+	height: 150px;
+	width: 150px;
 	margin: auto;
-	background-image: url(./ffab/ffab.png);
+	margin-bottom: -10px; /* AppIcon has padding in the PNG */
+	background-image: url('./ffab/ffab.png');
 	background-position: center;
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -73,20 +76,18 @@ body, #background {
 #words {
 	display: block; 
 	position: absolute; 
-	top: 50%; left: 50%;
-	transform: translate(-50%,-50%) rotateZ(-4deg);
+	top: 33%; left: 50%;
+	transform: translate(-50%,-33%) rotateZ(-4deg);
 	cursor: default;
 	background-color: transparent;
-	}
-#words {
-	margin-top: 8.0rem;
+	margin-top: 12.0rem;
 	width: 90%;
 	max-width: 600px;
+	padding-bottom: 4.0rem;
 	}
 #icon,
 #icon-ffab {
 	margin-top: -140px;
-	max-width: 500px;
 	}
 a:hover {
 		border-radius: 15%;
@@ -137,7 +138,9 @@ a:hover {
 	text-decoration: none;
 	border: none !important;
 	}
-
+#downloads {
+	padding-bottom: 2.0rem;
+}	
 
 @-webkit-keyframes fidget { /* Safari 4.0 - 8.0 */
 	0%   {top: -1px;}
