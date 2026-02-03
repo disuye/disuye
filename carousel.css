@@ -81,6 +81,27 @@
     cursor: default;
     box-shadow: 0 8px 40px rgba(0,0,0,0.6);
     }
+.lb-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    opacity: 0.4;
+    transition: opacity 0.2s;
+    z-index: 10000;
+    filter: brightness(0) invert(1);
+}
+.lb-arrow:hover {
+    opacity: 1;
+}
+.lb-left  {
+    left: 24px; 
+    }
+.lb-right {
+    right: 24px; 
+    }    
 /* crop off macOS screenshot shadow */
 .carousel-lightbox img {
     clip-path: inset(3% 2% 4% 2%);

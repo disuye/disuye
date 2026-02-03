@@ -1,64 +1,3 @@
-<!DOCTYPE html>
-<html>
-	<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>(⊙෴☉)</title>
-	<link rel="stylesheet" type="text/css" href="../disuye.css">
-	<link rel="stylesheet" type="text/css" href="../carousel.css">
-	<script src="../carousel.js"></script>
-	</head>
-	<body>
-		<div id="background">
-		</div>
-		<div id="yo"><a href="../" class="glitch" data-text="(⊙෴☉)">(⊙෴☉)</a></div>
-		<div id="words">
-			<div id="icon-ffab"></div>
-			<div>FFAB</div>
-			<div>FFmpeg Audio Batch</div>
-			<div id="info">
-					<p>FFAB is a complex audio batch processor, effects rack, command string builder &amp; graphical user interface for the glorious <a href="https://ffmpeg.org/download.html" class="glitch" data-text="FFmpeg">FFmpeg</a>.</p>
-					<p>But only the sound related stuff.</p>
-					<p>FFAB is for musicians, sound engineers, media archivists, sonic artists, mental experimentalists, or any fool curious enough to collide thousands of files together into one hot mess.</p>
-			</div>
-			<div id="downloads">
-					<a href="#"class="glitch" data-text="[public&nbsp;beta&nbsp;coming&nbsp;soon]">[public&nbsp;beta&nbsp;coming&nbsp;soon]</a>
-			</div>
-			
-			<div class="carousel-wrap" id="carouselWrap">
-			<div class="carousel-zone left" id="czL"><img src="../images/l.svg"></div>
-			<div class="carousel-zone right" id="czR"><img src="../images/r.svg"></div>
-				<div class="carousel-track" id="carouselTrack">
-					<img src="./images/ffab-009-screen-00.png" class="screen">
-					<img src="./images/ffab-009-screen-01.png" class="screen">
-					<img src="./images/ffab-009-screen-02.png" class="screen">
-					<img src="./images/ffab-009-screen-03.png" class="screen">
-					<img src="./images/ffab-009-screen-04.png" class="screen">
-					<img src="./images/ffab-009-screen-05.png" class="screen">
-					<img src="./images/ffab-009-screen-06.png" class="screen">
-					<img src="./images/ffab-009-screen-07.png" class="screen">
-					<img src="./images/ffab-009-screen-08.png" class="screen">
-					<img src="./images/ffab-009-screen-09.png" class="screen">
-					<img src="./images/ffab-009-screen-10.png" class="screen">
-					<img src="./images/ffab-009-screen-11.png" class="screen">
-					<img src="./images/ffab-009-screen-12.png" class="screen">
-					<img src="./images/ffab-009-screen-13.png" class="screen">
-					<img src="./images/ffab-009-screen-14.png" class="screen">
-					<img src="./images/ffab-009-screen-15.png" class="screen">
-					<img src="./images/ffab-009-screen-16.png" class="screen">
-					<img src="./images/ffab-009-screen-17.png" class="screen">
-					<img src="./images/ffab-009-screen-18.png" class="screen">
-					<img src="./ffab.png" class="screen">
-				</div>
-			</div>
-
-			<div class="carousel-lightbox" id="carouselLB">
-				<img class="lb-arrow lb-left" id="lbLeft" src="../images/l.svg" alt="Previous">
-				<img id="carouselLBImg" src="" alt="Preview">
-				<img class="lb-arrow lb-right" id="lbRight" src="../images/r.svg" alt="Next">
-			</div>
-
-			<script>
 				(function(){
 					var track = document.getElementById('carouselTrack');
 					var lb    = document.getElementById('carouselLB');
@@ -71,13 +10,13 @@
 					var coastIv = null;
 
 					var minSpeed = 1;
-					var maxSpeed = 10;
+					var maxSpeed = 7;
 					var rampTime = 1800;
 					var startTime = 0;
 					var gap = 6;
 					var currentSpeed = 0;
 					var currentDir = 0;
-					var friction = 0.96;
+					var friction = 0.93;
 
 					var touchStartX = 0;
 					var touchLastX = 0;
@@ -233,7 +172,3 @@
 						if(e.key === 'ArrowRight') showImage(currentIndex + 1);
 					});
 				})();
-			</script>
-
-	</body>
-</html>
