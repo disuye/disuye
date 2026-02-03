@@ -6,23 +6,165 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>(⊙෴☉)</title>
 	<link rel="stylesheet" type="text/css" href="../disuye.css">
+	<link rel="stylesheet" type="text/css" href="../carousel.css">
 	</head>
 	<body>
 		<div id="background">
 		</div>
-		<div id="yo"><span class="glitch" data-text="(⊙෴☉)">(⊙෴☉)</span></div>
+		<div id="yo"><a href="../" class="glitch" data-text="(⊙෴☉)">(⊙෴☉)</a></div>
 		<div id="words">
 			<div id="icon-ffab"></div>
 			<div>FFAB</div>
 			<div>FFmpeg Audio Batch</div>
 			<div id="info">
-					<p>FFAB is a complex audio batch processor, effects rack, command string builder &amp; graphical user interface for the glorious <a href="https://ffmpeg.org/download.html"class="glitch" data-text="######">FFmpeg</a>.</p>
+					<p>FFAB is a complex audio batch processor, effects rack, command string builder &amp; graphical user interface for the glorious <a href="https://ffmpeg.org/download.html" class="glitch" data-text="######">FFmpeg</a>.</p>
 					<p>But only the audio stuff.</p>
 					<p>An FFmpeg UI for musicians, sound engineers, media archivists, artists, experimentalists, or anyone curious enough to collide thousands of audio files together into one hot mess. </p>
 			</div>
 			<div id="downloads">
-					<a>[public beta coming soon]</a>
+					<a href="#"class="glitch" data-text="[public&nbsp;beta&nbsp;coming&nbsp;soon]">[public&nbsp;beta&nbsp;coming&nbsp;soon]</a>
 			</div>
-		</div>
+			
+			<div class="carousel-wrap" id="carouselWrap">
+			<div class="carousel-zone left" id="czL"><img src="../images/l.svg"></div>
+			<div class="carousel-zone right" id="czR"><img src="../images/r.svg"></div>
+				<div class="carousel-track" id="carouselTrack">
+					<img src="./images/ffab-009-screen-00.png" class="screen">
+					<img src="./images/ffab-009-screen-01.png" class="screen">
+					<img src="./images/ffab-009-screen-02.png" class="screen">
+					<img src="./images/ffab-009-screen-03.png" class="screen">
+					<img src="./images/ffab-009-screen-04.png" class="screen">
+					<img src="./images/ffab-009-screen-05.png" class="screen">
+					<img src="./images/ffab-009-screen-06.png" class="screen">
+					<img src="./images/ffab-009-screen-07.png" class="screen">
+					<img src="./images/ffab-009-screen-08.png" class="screen">
+					<img src="./images/ffab-009-screen-09.png" class="screen">
+					<img src="./images/ffab-009-screen-10.png" class="screen">
+					<img src="./images/ffab-009-screen-11.png" class="screen">
+					<img src="./images/ffab-009-screen-12.png" class="screen">
+					<img src="./images/ffab-009-screen-13.png" class="screen">
+					<img src="./images/ffab-009-screen-14.png" class="screen">
+					<img src="./images/ffab-009-screen-15.png" class="screen">
+					<img src="./images/ffab-009-screen-16.png" class="screen">
+					<img src="./images/ffab-009-screen-17.png" class="screen">
+					<img src="./images/ffab-009-screen-18.png" class="screen">
+					<img src="./ffab.png" class="screen">
+				</div>
+			</div>
+
+			<div class="carousel-lightbox" id="carouselLB">
+				<img id="carouselLBImg" src="" alt="Preview">
+			</div>
+
+			<script>
+				(function(){
+					var track = document.getElementById('carouselTrack');
+					var lb    = document.getElementById('carouselLB');
+					var lbImg = document.getElementById('carouselLBImg');
+					var zL    = document.getElementById('czL');
+					var zR    = document.getElementById('czR');
+					var iv    = null;
+					var coastIv = null;
+
+					var minSpeed = 5;
+					var maxSpeed = 20;
+					var rampTime = 3000;
+					var startTime = 0;
+					var gap = 6;
+					var currentSpeed = 0;
+					var currentDir = 0;
+					var friction = 0.9;  // per tick — lower = quicker stop
+
+					document.body.appendChild(lb);
+
+					var origItems = Array.from(track.querySelectorAll('img.screen'));
+					var itemCount = origItems.length;
+
+					for (var i = itemCount - 1; i >= 0; i--)
+						track.insertBefore(origItems[i].cloneNode(true), track.firstChild);
+					origItems.forEach(function(img){
+						track.appendChild(img.cloneNode(true));
+					});
+
+					var setWidth = 0;
+
+					function calcSetWidth(){
+						var w = 0;
+						var children = track.children;
+						for (var i = 0; i < itemCount; i++)
+							w += children[i].offsetWidth + gap;
+						return w;
+					}
+
+					function wrapScroll(){
+						if (track.scrollLeft >= 2 * setWidth)
+							track.scrollLeft -= setWidth;
+						else if (track.scrollLeft < setWidth)
+							track.scrollLeft += setWidth;
+					}
+
+					function initScroll(){
+						setWidth = calcSetWidth();
+						if (!setWidth) return;
+						track.style.scrollBehavior = 'auto';
+						track.scrollLeft = setWidth;
+					}
+
+					window.addEventListener('load', initScroll);
+					initScroll();
+
+					function stopCoast(){ if(coastIv){ clearInterval(coastIv); coastIv = null; } }
+
+					function startScroll(dir){
+						stopCoast();
+						if(iv){ clearInterval(iv); iv = null; }
+						currentDir = dir;
+						startTime = Date.now();
+						iv = setInterval(function(){
+							var elapsed = Date.now() - startTime;
+							var t = Math.min(elapsed / rampTime, 1);
+							currentSpeed = minSpeed + (maxSpeed - minSpeed) * t;
+							track.scrollLeft += currentDir * currentSpeed;
+							wrapScroll();
+						}, 12);
+					}
+
+					function stopScroll(){
+						if(iv){ clearInterval(iv); iv = null; }
+						// coast with inertia
+						var coastSpeed = currentSpeed;
+						var coastDir = currentDir;
+						if(coastSpeed < 0.5) return;
+						stopCoast();
+						coastIv = setInterval(function(){
+							coastSpeed *= friction;
+							if(coastSpeed < 0.3){ stopCoast(); return; }
+							track.scrollLeft += coastDir * coastSpeed;
+							wrapScroll();
+						}, 12);
+					}
+
+					zL.addEventListener('mouseenter', function(){ startScroll(-1); });
+					zL.addEventListener('mouseleave', stopScroll);
+					zR.addEventListener('mouseenter', function(){ startScroll(1); });
+					zR.addEventListener('mouseleave', stopScroll);
+
+					track.addEventListener('click', function(e){
+						if(e.target.tagName === 'IMG'){
+							lbImg.src = e.target.src;
+							lb.classList.add('open');
+						}
+					});
+
+					lb.addEventListener('click', function(e){
+						if(e.target !== lbImg){ lb.classList.remove('open'); }
+					});
+
+					document.addEventListener('keydown', function(e){
+						if(e.key === 'Escape'){ lb.classList.remove('open'); }
+					});
+				})();
+			</script>
+
 	</body>
-	</html>
+</html>
