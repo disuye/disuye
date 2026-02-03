@@ -1,0 +1,253 @@
+@import url('https://disuye.com/fonts/JetBrainsMono-Thin.ttf');
+body {
+	font-family: "JetBrains Mono", "Courier New"; 
+	color: black !important;
+	font-size: 1.6rem; 
+	font-style: normal;
+	font-weight: 100;
+	line-height: 1.8rem;
+	text-rendering: geometricPrecision;
+	text-align: center; 
+	overflow-x: hidden;
+	overflow-y: auto;
+	}
+body, #background {
+	background-color: white;
+	width: 100vw;
+	height: 100vh;
+	margin: 0; 
+	padding: 0; 
+}
+#background {
+	display: block;
+	position: fixed;
+	top: 0; left: 0;
+	z-index: -1;
+	background: url(
+		data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVQYV2O8ffu2LwMDAwMjiAABAC1zAuFbE/raAAAAAElFTkSuQmCC
+		);
+	box-shadow: 0px 0px 80px rgba(0,0,0,0.2) inset;
+	}
+* {
+	padding: 0;
+	margin: 0;
+	text-align: center;
+	}
+#yo {
+	display: block;
+	z-index: 10;
+	position: fixed: top:0 right: 0;
+	width: 100vw;
+	background-color: white;
+	}
+#icon {
+	height: 140px;
+	width: 140px;
+	margin: auto;
+	background-image: url(./disuye.png);
+	background-color: transparent;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 1.0;
+	border-radius: 50%;
+	box-shadow: 0px 0px 80px rgba(0,0,0,0.2);
+	}	
+#icon-ffab {
+	height: 160px;
+	width: 146px;
+	margin: auto;
+	background-image: url(./ffab/ffab.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	opacity: 1.0;
+	border-radius: 50%;
+	}
+#words {
+	display: block; 
+	position: absolute; 
+	top: 50%; left: 50%;
+	transform: translate(-50%,-50%) rotateZ(-4deg);
+	cursor: default;
+	background-color: transparent;
+	}
+#words {
+	margin-top: 8.0rem;
+	width: 90%;
+	max-width: 600px;
+	}
+#icon,
+#icon-ffab {
+	margin-top: -140px;
+	max-width: 500px;
+	}
+a:hover {
+		border-radius: 10%;
+	}	
+#words a {
+	display: inline-block;
+	text-decoration: none; 
+	border-bottom: 0.05rem solid black;
+	padding-bottom: 0.0rem;
+	color: black;
+	background-color: transparent;
+	}		
+#words a:hover {
+	background-color: yellow;
+	box-shadow: 0px 0px 5px yellow;
+	opacity: 0.8;
+	border-bottom: 0.05rem solid transparent;
+	position: relative;
+	-webkit-transform: scale(0.9, 2.0); /* Safari Chrome */
+		-moz-transform: scale(0.9, 2.0); /* Firefox */
+		-ms-transform: scale(0.9, 2.0); /* IE 9 */
+			-o-transform: scale(0.9, 2.0); /* Opera */
+			transform: scale(0.9, 2.0);
+	-webkit-animation: fidget 0.05s infinite; /* Safari 4-8 */
+			animation: fidget 0.05s infinite;
+	}
+#info {
+	font-size: 0.83rem;
+	line-height: 1.5rem;
+	margin: 0; 
+	padding: 1.0rem 0 1.0rem 0;
+	}
+#info p {
+	text-align: left;
+	word-break: keep-all;
+	padding-top: 1.0rem;
+	}
+#ffab img {
+	width: 64px; height: 64px;
+	}
+#ffab {
+	padding: 1.0rem 0 1.0rem 0;
+	border: none !important;
+	}
+#downloads,
+#downloads a {
+	text-align: center;
+	margin: auto;
+	font-size: 1.2rem;
+	text-decoration: none;
+	border: none !important;
+	}
+@-webkit-keyframes fidget { /* Safari 4.0 - 8.0 */
+	0%   {top: -1px;}
+	25%  {top: 5px;}
+	75%  {top: -2px}
+	82%  {top: 10px;}
+	100% {top: -10px;}
+	}
+@keyframes fidget {
+	0%   {top: -1px;}
+	25%  {top: 5px;}
+	75%  {top: -2px}
+	82%  {top: 10px;}
+	100% {top: -10px;}
+	}
+/* smartphones, touchscreens */
+@media (hover: none) and (pointer: coarse) {
+	.words a {
+		border-bottom: 0;
+		position: relative;
+		-webkit-transform: scale(0.9, 2.0); /* Safari Chrome */
+			-moz-transform: scale(0.9, 2.0); /* Firefox */
+			-ms-transform: scale(0.9, 2.0); /* IE 9 */
+				-o-transform: scale(0.9, 2.0); /* Opera */
+				transform: scale(0.9, 2.0);
+		-webkit-animation: fidget 0.05s infinite; /* Safari 4-8 */
+				animation: fidget 0.05s infinite;
+	}
+}
+
+/* ---------- EOF ---------- */
+
+
+/* GLITCH */
+
+.glitch {
+display: inline-block;
+  position: relative;
+  margin: 0 auto;
+  background: var(--glitch-bg-color);
+}
+
+.glitch::before, 
+.glitch::after {
+  animation-iteration-count: infinite;
+  animation-timing-function: steps(2);
+  animation-direction: alternate-reverse;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  clip: rect(0, 9999px, 0, 0);
+  content: attr(data-text);
+  opacity: 0.5;
+}
+
+.glitch::after {
+  animation-name: glitch-animation;
+  animation-duration: 1.9s;
+  left: 2px;
+  background: var(--glitch-bg-color);
+  text-shadow: rgb(255, 0, 115) 0 0 2px;
+}
+
+.glitch::before {
+  animation-name: glitch-animation-2;
+  animation-duration: 1.5s;
+  left: -2px;
+  background: var(--glitch-bg-color);
+    text-shadow: rgb(45, 255, 255) -2px 0 10px;
+}
+
+@keyframes glitch-animation {
+  0% {clip: rect(42px, 9999px, 44px, 0);}
+  5% {clip: rect(12px, 9999px, 59px, 0);}
+  10% {clip: rect(48px, 9999px, 29px, 0);}
+  15% {clip: rect(42px, 9999px, 73px, 0);}
+  20% {clip: rect(63px, 9999px, var(--h1-font-size), 0);}
+  25% {clip: rect(34px, 9999px, 55px, 0);}
+  30% {clip: rect(86px, 9999px, 73px, 0);}
+  35% {clip: rect(20px, 9999px, var(--h1-font-size), 0);}
+  40% {clip: rect(26px, 9999px, 60px, 0);}
+  45% {clip: rect(25px, 9999px, 66px, 0);}
+  50% {clip: rect(57px, 9999px, 98px, 0);}
+  55% {clip: rect(5px, 9999px, 46px, 0);}
+  60% {clip: rect(82px, 9999px, 31px, 0);}
+  65% {clip: rect(54px, 9999px, var(--h1-font-size), 0);}
+  70% {clip: rect(28px, 9999px, 99px, 0);}
+  75% {clip: rect(45px, 9999px, 69px, 0);}
+  80% {clip: rect(23px, 9999px, 85px, 0);}
+  85% {clip: rect(54px, 9999px, 84px, 0);}
+  90% {clip: rect(45px, 9999px, 47px, 0);}
+  95% {clip: rect(37px, 9999px, var(--h1-font-size), 0);}
+  100% {clip: rect(4px, 9999px, 91px, 0);}
+}
+
+@keyframes glitch-animation-2 {
+  0% {clip: rect(65px, 9999px, 100px, 0);}
+  5% {clip: rect(52px, 9999px, 74px, 0);}
+  10% {clip: rect(79px, 9999px, 85px, 0);}
+  15% {clip: rect(75px, 9999px, var(--h1-font-size), 0);}
+  20% {clip: rect(67px, 9999px, 61px, 0);}
+  25% {clip: rect(14px, 9999px, 79px, 0);}
+  30% {clip: rect(1px, 9999px, 66px, 0);}
+  35% {clip: rect(86px, 9999px, 30px, 0);}
+  40% {clip: rect(23px, 9999px, 98px, 0);}
+  45% {clip: rect(85px, 9999px, 72px, 0);}
+  50% {clip: rect(71px, 9999px, 75px, 0);}
+  55% {clip: rect(2px, 9999px, 48px, 0);}
+  60% {clip: rect(30px, 9999px, var(--h1-font-size), 0);}
+  65% {clip: rect(59px, 9999px, 50px, 0);}
+  70% {clip: rect(41px, 9999px, 62px, 0);}
+  75% {clip: rect(2px, 9999px, 82px, 0);}
+  80% {clip: rect(47px, 9999px, 73px, 0);}
+  85% {clip: rect(3px, 9999px, var(--h1-font-size), 0);}
+  90% {clip: rect(26px, 9999px, 55px, 0);}
+  95% {clip: rect(42px, 9999px, 97px, 0);}
+  100% {clip: rect(38px, 9999px, 49px, 0);
+}
+}
