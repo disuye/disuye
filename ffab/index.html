@@ -162,7 +162,7 @@
 					<h3>Analysis</h3>
 						<p>Waveform Image, Volume Detect, DR Meter, ReplayGain, Audio Stats, Silence Detect</p>
 					<h3>FFAB Routing &amp; I/O</h3>
-						<p>SideChain Input, Aux Output, Audio Split, Smart Aux Return</p>	
+						<p>Sidechain Input, Aux Output, Audio Split, Smart Aux Return</p>	
 
 
 				<h2 id="section-4">Input / Output</h2>
@@ -313,30 +313,31 @@
 
 				<h2 id="section-7">Special Filters</h2>
 
-				<h3>Audio Input / SideChain Filter</h3>
+				<h3>Audio Input / Sidechain Filter</h3>
 				<div class="imgcaption"><img src="./readme/ffab-audioinput.png">The Audio Input filter mimics the Main INPUT File List</div>
 
 				<ul>
 					<li>Dedicated file list per instance</li>
 					<li>Add File(s) / Add Folder / Clear List</li>
 					<li>Metadata scanning toggle or Rescan after import</li>
-					<li>Multiple instances for complex multi-input setups</li>
+					<li>Run multiple instances for complex setups</li>
 				</ul>
 
 				<h3>Audio Split (asplit)</h3>
-				<div class="imgcaption"><img src="./readme/ffab-asplit.png">Parallel process Main + 7 streams (8 in total), with auto-summing back into the main audio stream</div>
-				<div class="imgcaption"><img src="./readme/ffab-asplit-subchain.png">Filter Sub-chains are almost identical to the Main Filter Chain</div>
+				<div class="imgcaption"><img src="./readme/ffab-asplit.png">Parallel audio streams, Thru + 7 (8 in total), with auto-summing back into the main audio stream</div>
+				<div class="imgcaption"><img src="./readme/ffab-asplit-subchain.png">Parallel filter Sub-chains are almost identical to the Main Filter Chain</div>
 
 				<ul>
 					<li>Up to 8 parallel streams</li>
 					<li>Sub-chain support for each stream</li>
 					<li>Separate mute/solo per stream</li>
 					<li>Aux output per stream</li>
+					<li>Advanced: Nested Asplit possible</li>
 				</ul>
 
 				<h3>Aux Output Filter</h3>
-				<div class="imgcaption"><img src="./readme/ffab-auxoutput-uncompressed.png">Output as many concurrent file formats as FFmpeg can handle</div>
-				<div class="imgcaption"><img src="./readme/ffab-auxoutput-advanced.png">Uncompressed, Lossless, Compressed &amp; Advanced -c:a strings</div>				
+				<div class="imgcaption"><img src="./readme/ffab-auxoutput-uncompressed.png">Output as many concurrent file formats as FFmpeg &amp; your storage disk can handle</div>
+				<div class="imgcaption"><img src="./readme/ffab-auxoutput-advanced.png">Uncompressed, Lossless, Compressed, plus Advanced via custom "-c:a" strings</div>				
 				<ul>
 					<li>Branch audio to separate output file</li>
 					<li>Automatic naming for batch processing</li>
@@ -346,8 +347,9 @@
 				<h3>Smart Aux Return</h3>
 				<div class="imgcaption"><img src="./readme/ffab-smartauxreturn.png">FFAB's auto-amix gathers up all loose ends</div>
 				<ul>
-					<li>Automatic mixing of insert-chain results</li>
-					<li>Position-based detection</li>
+					<li>Automatic summing of lose filter outputs</li>
+					<li>Position-based stream detection</li>
+					<li>"Funnel all from above" capture logic</li>
 				</ul>
 
 				<h3>Custom FFmpeg Filter</h3>
@@ -380,7 +382,7 @@
 				<h3>Visual Indicators</h3>
 
 				<ul>
-					<li>Color-coded Filter IDs: Unique HSL colors &amp; hexidecimal labell per filter</li>
+					<li>Color-coded Filter IDs: Unique HSL colors &amp; hexidecimal labels per filter</li>
 					<li>FFmpeg Status LED: Green when available, red when missing</li>
 					<li>Progress bars: Per-file progress, intra-file progress; depending on process</li>
 					<li>Orange playhead: Current position on waveform</li>
@@ -395,10 +397,10 @@
 
 				<h2 id="section-9">Command Building</h2>
 
-				<div>All FilterChain command building happens with these key methods:</div>
+				<p>Filter Chain commands build with these key methods. API breakout not fully implemented but in progress.</p>
 
-				<h3>buildCompleteCommand() &larr; multiple overloads:</h3>
-
+				<h3>buildCompleteCommand()</h3>
+				<p> &larr; multiple overloads:</p>
 				<ul>
 					<li>2-param: (inputFile, outputFile)</li>
 					<li>3-param: (inputFile, outputFile, mutedPositions)</li>
@@ -488,7 +490,7 @@
 				<h2 id="section-13">Downloads &amp; Sys Reqs</h2>
 
 				<p>Mac users might need to run the following Terminal command to get around Apple gate-keeping:
-				<code>xattr -cr /Applications/FFAB.app</code> Apple charges an annual Developer fee and requires notarization; FFAB is free. Yeah nah.</p>
+				<code>xattr -cr /Applications/FFAB.app</code> Apple charges an annual Developer fee and requires notarization. FFAB is free. So, yeah nah.</p>
 
 				<div class="two-row">
 					<div>macOS</div>
