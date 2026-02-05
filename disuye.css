@@ -156,20 +156,20 @@ a:hover {
 	}
 .downloads {
 	padding-bottom: 2.0rem;
-}	
+	}	
 #readme *:not([class*="carousel"], [id*="carousel"], [class*="screen"], [class*="lb"], [class*="cz"]) {
 	display: block;
 	margin: auto;
 	text-align: left !important;
-}
+	}
 #readme img:not([class*="carousel"], [id*="carousel"], [class*="screen"]) {
 	width: 80%;
 	height: auto;	
-}
+	}
 #readme code {
 	display: inline;
 	font-size: 0.87rem;
-}
+	}
 #readme .two-row div {
 	display: inline-block;
 	width: calc(50%);
@@ -177,22 +177,22 @@ a:hover {
 	margin-right: -0.5rem; 
 	padding: 0.5rem 0 !important;
 	text-align: center !important;
-}
+	}
 #readme .two-row div:nth-child(4n+1),
 #readme .two-row div:nth-child(4n+2) {
 	background-color: rgba(128,128,128,0.07);
-}
+	}
 #readme .two-row div:nth-child(2n+1) {
 	font-weight: 700;
-}
+	}
 #readme .two-row div:nth-child(2n+2) {
 	font-size: 0.8rem;
-}
+	}
 #readme {
 	font-size: 1.0rem;
 	margin: 0;
 	padding: 0;
-}
+	}
 #readme p,
 #readme h1,
 #readme h2,
@@ -200,17 +200,17 @@ a:hover {
 #readme div {
 	padding-bottom: 1.0em;
 	padding-top: 1.0rem;
-}
+	}
 #readme ul, 
 #readme li {
 	font-size: 0.8rem;
-}
+	}
 #readme li::before {
 	content: "\29BF  ";	
-}
+	}
 #readme ul {
 	padding-bottom: 3.0rem;
-}
+	}
 #readme .imgcaption {
 	display: block;
 	width: calc(100% - 4.0rem);
@@ -221,7 +221,7 @@ a:hover {
 	font-style: italic;
 	margin: 2.0rem 0;
 	border-radius: 2.0rem;
-}
+	}
 #readme h1, #readme h2 {
 	width: calc(100% - 4.0rem);
 	font-size: 2.2rem;
@@ -231,15 +231,15 @@ a:hover {
 	padding: 2.0rem;
 	margin: 2.0rem 0;
 	text-align: center;
-}
+	}
 #readme h2 {
 	font-size: 1.8rem !important;
 	font-weight: 400;
-}
+	}
 #readme h3 {
 	font-size: 1.4rem !important;
 	font-weight: 400;
-}
+	}
 
 @-webkit-keyframes fidget { /* Safari 4.0 - 8.0 */
 	0%   {top: -1px;}
