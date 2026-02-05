@@ -24,7 +24,10 @@
 					var touchDragging = false;
 
 					// image source list & current index
-					var srcs = Array.from(track.querySelectorAll('img.screen')).map(function(img){ return img.src; });
+					var carouselImgs = Array.from(track.querySelectorAll('img.screen'));
+					var readmeImgs = Array.from(document.querySelectorAll('#readme img:not(.screen)'));
+					var allImgs = carouselImgs.concat(readmeImgs);
+					var srcs = allImgs.map(function(img){ return img.src; });
 					var currentIndex = 0;
 
 					document.body.appendChild(lb);
@@ -147,6 +150,19 @@
 							lbImg.src = clicked;
 							lb.classList.add('open');
 						}
+					});
+
+					// lightbox for non-carousel images
+					readmeImgs.forEach(function(img){
+						img.style.cursor = 'zoom-in';
+						img.addEventListener('click', function(e){
+							var clicked = e.target.src;
+							for (var i = 0; i < srcs.length; i++){
+								if (srcs[i] === clicked){ currentIndex = i; break; }
+							}
+							lbImg.src = clicked;
+							lb.classList.add('open');
+						});
 					});
 
 					lbL.addEventListener('click', function(e){

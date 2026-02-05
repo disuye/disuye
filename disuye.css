@@ -99,12 +99,21 @@ body, #background {
 	padding-bottom: 4.0rem;
 	}
 .padding {
-	padding: 3.0rem;
+	padding: 1.0rem;
 }	
 #icon,
 #icon-ffab {
 	margin-top: -140px;
 	}
+#icon-ffab-small {
+	margin: 0;
+	height: 64px;
+	width: 64px;
+	padding-top: 16px;
+}
+.smalltext {
+	font-size: 0.9rem;
+}	
 a:hover {
 		border-radius: 5%;
 	}	
