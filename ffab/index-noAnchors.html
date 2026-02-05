@@ -27,7 +27,6 @@
 			</div>
 	
 			<div class="padding"></div>
-			<a href="#section-1">section 1</a>
 		
 			<div id="readme">
 				<h1>FFAB Overview</h1>
@@ -35,9 +34,9 @@
 				<h3>Current Version: 0.1.1</h3>
 
 					<p>FFAB is a GUI wrapper for FFmpeg that makes designing complex audio filter chains easily accessible to non-command-line users.</p>
+					<p>The app creates, saves, shares, and modifies complex filter chain "presets" – without embedding FFmpeg code - FFAB locates and calls the user's installed FFmpeg binary.</p>
 
-
-<!-- START IMAGE CAROUSEL -->
+				<!-- START IMAGE CAROUSEL -->
 					<div class="carousel-wrap" id="carouselWrap">
 						<div class="carousel-zone left" id="czL"><img src="../images/l.svg"></div>
 						<div class="carousel-zone right" id="czR"><img src="../images/r.svg"></div>
@@ -93,28 +92,7 @@
 					</div>
 				<!-- END IMAGE CAROUSEL -->
 
-
-					<p>The app creates, saves, shares, and modifies complex filter chain "presets" – without embedding FFmpeg code - FFAB locates and calls the user's installed FFmpeg binary.</p>
-
-					<div class="sections">
-					<a href="#section-1">App Architecture</a>
-					<a href="#section-2">Filter Chain Overview</a>
-					<a href="#section-3">Audio Filters</a>
-					<a href="#section-4">Input / Output</a>
-					<a href="#section-5">Audio Previews</a>
-					<a href="#section-6">Batch Processing Modes</a>
-					<a href="#section-7">Special Filters</a>
-					<a href="#section-8">UI Overview</a>
-					<a href="#section-9">Command Building</a>
-					<a href="#section-10">Preset System</a>
-					<a href="#section-11">Keyboard Shortcuts</a>
-					<a href="#section-12">Region Preview Shortcuts</a>
-					<a href="#section-13">Downloads &amp; Sys Reqs</a>
-					</div>
-
-				
-
-				<h2 id="section-1">App Architecture</h2>
+				<h2>App Architecture</h2>
 
 					<h3>Visual Filter Chain Builder</h3> 
 					<p>Drag-and-drop filter ordering with vertical "effects rack" design</p>
@@ -141,7 +119,7 @@
 					<p>Build FFmpeg commands to process in FFAB, or copy &amp; paste complete commands to the Terminal</p>
 					<div class="imgcaption"><img src="./readme/ffab-viewcommand.png">Copy & paste FFAB's FFmpeg command output directly into the terminal</div>
 
-				<h2 id="section-2">Filter Chain Overview</h2>
+				<h2>Filter Chain Overview</h2>
 				
 					<p>Filter Chain displayed on the left, currently selected filter parameters displayed on the right.</p>
 
@@ -167,7 +145,7 @@
 					<h3>Custom Output Switch</h3>
 						<p>Bypass the internal hardcoded audio stream and send audio anywhere. Usually used with the Custom FFmpeg filter or similar.</p>
 
-				<h2 id="section-3">Audio Filters</h2>
+				<h2>Included Filters</h2>
 
 					<h3>Routing &amp; I/O</h3>
 						<div>SideChain Input, Aux Output, Audio Split, Smart Aux Return</div>
@@ -193,7 +171,7 @@
 						<div>Waveform Image, Volume Detect, DR Meter, ReplayGain, Audio Stats, Silence Detect</div>
 
 
-				<h2 id="section-4">Input / Output</h2>
+				<h2>Input/Output</h2>
 
 					<h3>Input Formats</h3>
 						<p>WAV, MP3, FLAC, AIFF, M4A, OGG, Opus, WMA, AAC... any audio format included with FFmpeg</p>
@@ -218,7 +196,7 @@
 						<li>Bitrate (kbps)</li>
 					</ul>
 
-					<h2 id="section-5">Audio Previews</h2>
+					<h2>Audio Previews</h2>
 					<p>Hear an instant preview of yor FFmpeg filter chain,  plus a helpful waveform imag. Click [Generate Preview] in either the main app window or from within the larger pop-out Region Preview window.</p>
 					<div class="imgcaption"><img src="./readme/ffab-preview-widget.png">The Generate Preview widget</div>
 
@@ -235,7 +213,7 @@
 					</ul>
 
 
-				<h2 id="section-6">Batch Processing Modes</h2>
+				<h2>Batch Processing Modes</h2>
 
 				<div class="row">
 					<h3>#1 Sequential</h3>
@@ -333,7 +311,7 @@
 					<li>Multiple confirmation dialogs for mathematically large batches</li>
 				</ul>
 
-				<h2 id="section-7">Special Filters</h2>
+				<h2>Special Filters</h2>
 
 				<h3>Audio Input / SideChain Filter</h3>
 				<div class="imgcaption"><img src="./readme/ffab-audioinput.png">The Audio Input filter mimics the Main INPUT File List</div>
@@ -381,7 +359,7 @@
 					<li>Use hardcoded audio routing or breakout to custom streams</li>
 				</ul>
 
-				<h2 id="section-8">UI Overview</h2>
+				<h2>UI Overview</h2>
 
 				<h3>Main Window Layout</h3>
 
@@ -415,7 +393,7 @@
 					<li>Theme-aware waveform and UI elements</li>
 				</ul>
 
-				<h2 id="section-9">Command Building</h2>
+				<h2>Command Building</h2>
 
 				<div>All FilterChain command building happens with these key methods:</div>
 
@@ -443,7 +421,7 @@
 					<li>				PreviewGenerator calls buildPreviewCommand() for audio preview</li>
 				</ul>
 
-				<h2 id="section-10">Preset System</h2>
+				<h2>Preset System</h2>
 
 				<h3>Save Options</h3>
 
@@ -462,7 +440,7 @@
 					<li>Default preset location: ~/Documents/FFAB/Presets</li>
 				</ul>
 
-				<h2 id="section-11">Keyboard Shortcuts</h2>
+				<h2>Keyboard Shortcuts</h2>
 
 				<div class="two-row">
 					<div>[`] or [A]</div>
@@ -490,7 +468,7 @@
 					<div>Toggle command formatting</div>
 				</div>
 
-				<h2 id="section-12">Region Preview Shortcuts</h2>
+				<h2>Region Preview Shortcuts</h2>
 
 				<div class="two-row">
 					<div>ALT+Click+Drag</div>
@@ -507,7 +485,7 @@
 				</div>
 
 				
-				<h2 id="section-13">Downloads &amp; Sys Reqs</h2>
+				<h2>Downloads</h2>
 				<div class="downloads">
 						<a href="#"class="glitch" data-text="[public&nbsp;beta&nbsp;coming&nbsp;soon]">[public&nbsp;beta&nbsp;coming&nbsp;soon]</a>
 				</div>
