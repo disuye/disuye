@@ -164,7 +164,7 @@ a:hover {
 		}	
 .downloads a {
 	display: inline-block;
-	font-size: 1.8rem;
+	font-size: 1.2rem;
 	text-decoration: none;
 	border: none !important;
 	display: inline-block !important;
@@ -305,8 +305,7 @@ a:hover {
 				animation: fidget 0.05s infinite;
 		}
 	#background {
-		display: block;
-		position: unset;
+		all: unset;
 		z-index: -1;
 		background: url(
 			data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVQYV2O8ffu2LwMDAwMjiAABAC1zAuFbE/raAAAAAElFTkSuQmCC
