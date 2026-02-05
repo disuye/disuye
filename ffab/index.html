@@ -194,7 +194,7 @@
 					</ul>
 
 					<h2 id="section-5">Audio Previews</h2>
-					<p>Instant audio preview of FFmpeg filter chains,  plus a helpful waveform image. Highlight any audio file in the Main File List, click [Generate Preview] in either the main app window or from within the larger pop-out Region Preview window.</p>
+					<p>Instant audio preview of FFmpeg filter chains,  plus a helpful waveform image and scrub playhead. Highlight any audio file in the Main File List, click [Generate Preview] in either the main app window or from within the larger pop-out Region Preview window, then press [Play].</p> <p>Or, lean into the key command combo of [↑/↓] in the File List, [←] to generate preview files  then [→] to play audio, makes auditioning fast.</p>
 					<div class="imgcaption"><img src="./readme/ffab-preview-widget.png">The Generate Preview widget</div>
 
 					<p>The pop-out Region Preview window is resizable and provides precise tools to highlight a specific audio region – say, a more representative section of the audio to be auditioned. This is helpful when handling long duration files (podcast dialog, archive recordings etc).</p>
@@ -203,20 +203,22 @@
 						<li>Waveform visualization: Visual representation of audio</li>
 						<li>Click-to-seek: Click waveform to jump to position</li>
 						<li>Drag-to-scrub: Drag playhead for precise positioning</li>
-						<li>Region selection: ALT+drag to select region for focused playback</li>
 						<li>Region Preview Window: Expanded view for detailed scrubbing</li>
-						<li>View FFmpeg command: Syntax-highlighted command display</li>
+						<li>Region selection: ALT+drag to select region for focused playback</li>
+						<li>Region move: SHIFT+drag to reposition region</li>
 						<li>Time display: Current position and total duration</li>
 					</ul>
 
 
 				<h2 id="section-6">Batch Processing Modes</h2>
 
+				<p>The underlying concept of FFAB is fast and painless audio batch processing, either for utility or purely creative reasons.</p>
+
 				<div class="row">
 					<h3>#1 Sequential</h3>
 					<div>Apply chain to every file: N &rarr; N</div>
+					<div class="imgcaption"><img src="./readme/ffab-batch01.png">Batch Algorithm #1: Sequential</div>
 					<div><b>Use Cases:</b>
-						<div class="imgcaption"><img src="./readme/ffab-batch01.png">Batch Algorithm #1: Sequential</div>
 						<ul>
 							<li>Convert a folder of 24/96k AIFF &rarr; FLAC & MP3 & 16/44k WAV all in one pass</li>
 							<li>Normalize dialog on 100+ raw video files without transcoding video</li>
@@ -226,7 +228,7 @@
 				</div>
 				<div class="row">
 					<h3>#2 Iterate</h3>
-					<div>Re-process each file R times with gain reduction: N &times; R</div>
+					<div>Feedback R times with gain reduction: N &times; R</div>
 					<div class="imgcaption"><img src="./readme/ffab-batch02.png">Batch Algorithm #2: Iterate / Photocopy</div>
 					<div><b>Use Cases:</b>
 						<ul>
@@ -286,8 +288,8 @@
 				<div class="row">
 					<h3>#7 Cartesian Triple</h3>
 					<div>Three-way product: N &times; M &times; P</div>
-					<div class="imgcaption"><img src="./readme/ffab-batch07.png">Batch Algorithm #7: Cartesian / many to many (to many!)</div>
-					<div class="imgcaption"><img src="./readme/ffab-batch07confirm.png">... fill up disk storage in no time</div>
+					<div class="imgcaption"><img src="./readme/ffab-batch07.png">Batch Algorithm #7: Cartesian / many to many (too many!)...</div>
+					<div class="imgcaption"><img src="./readme/ffab-batch07confirm.png">... fills up disk storage in no time</div>
 					<div><b>Use Cases:</b>
 						<ul>
 							<li>Combine a few source files &rarr; new unique library</li>
@@ -302,9 +304,10 @@
 				<ul>
 					<li>Pause/Resume functionality</li>
 					<li>Cancel with cleanup</li>
-					<li>Per-file &amp; intra-file progress bars and process time elapsed / remaining</li>
+					<li>Per-file &amp; intra-file progress bars</li>
+					<li>Process time elapsed / remaining</li>
 					<li>Success / failure counts</li>
-					<li>Total batch out disk size estimation vs. disk space available</li>
+					<li>Total batch disk size estimation vs. disk space available</li>
 					<li>Multiple confirmation dialogs for mathematically large batches</li>
 				</ul>
 
@@ -315,8 +318,8 @@
 
 				<ul>
 					<li>Dedicated file list per instance</li>
-					<li>Add Files / Add Folder / Clear / Rescan</li>
-					<li>Metadata scanning toggle</li>
+					<li>Add File(s) / Add Folder / Clear List</li>
+					<li>Metadata scanning toggle or Rescan after import</li>
 					<li>Multiple instances for complex multi-input setups</li>
 				</ul>
 
