@@ -252,7 +252,8 @@ a:hover {
 #readme h2 {
 	font-size: 1.6rem !important;
 	font-weight: 400;
-	}
+	margin-top: 5.0rem !important;
+}
 #readme h3 {
 	font-size: 1.2rem !important;
 	font-weight: 400;
