@@ -7,7 +7,7 @@
     font-display: swap;
 }
 body {
-	font-family: "Fira Code"; 
+	font-family: "Fira Code", monospace; 
 	color: black !important;
 	font-size: 1.6rem; 
 	font-style: normal;
