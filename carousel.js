@@ -25,7 +25,9 @@
 
 					// image source list & current index
 					var carouselImgs = Array.from(track.querySelectorAll('img.screen'));
-					var readmeImgs = Array.from(document.querySelectorAll('#readme img:not(.screen)'));
+					var readmeImgs = Array.from(document.querySelectorAll('#readme img:not(.screen)')).filter(function(img){
+						return img.naturalWidth > 255 && img.naturalHeight > 255;
+						});
 					var allImgs = carouselImgs.concat(readmeImgs);
 					var srcs = allImgs.map(function(img){ return img.src; });
 					var currentIndex = 0;
