@@ -184,8 +184,11 @@ a:hover {
 	height: auto;	
 	}
 #readme code {
-	display: inline;
+	display: inline-block !important;
 	font-size: 0.87rem;
+	color: #ff5500;
+	background-color: rgba(42, 42, 42, 0.07);
+	padding: 0.1rem 0.5rem;
 	}
 #readme .two-row div {
 	display: inline-block;
@@ -300,7 +303,16 @@ a:hover {
 				transform: scale(0.9, 2.0);
 		-webkit-animation: fidget 0.05s infinite; /* Safari 4-8 */
 				animation: fidget 0.05s infinite;
-	}
+		}
+	#background {
+		display: block;
+		position: unset;
+		z-index: -1;
+		background: url(
+			data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAFUlEQVQYV2O8ffu2LwMDAwMjiAABAC1zAuFbE/raAAAAAElFTkSuQmCC
+			);
+		box-shadow: none !important;
+		}
 }
 
 /* GLITCH */
