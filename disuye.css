@@ -86,6 +86,21 @@ body, #background {
 	max-width: 600px;
 	padding-bottom: 4.0rem;
 	}
+#ffab {
+	display: block; 
+	position: absolute; 
+	top: 0; left: 50%;
+	transform: translate(-50%,0);
+	cursor: default;
+	background-color: transparent;
+	margin-top: 12.0rem;
+	width: 85%;
+	max-width: 600px;
+	padding-bottom: 4.0rem;
+	}
+.padding {
+	padding: 3.0rem;
+}	
 #icon,
 #icon-ffab {
 	margin-top: -140px;
@@ -93,7 +108,7 @@ body, #background {
 a:hover {
 		border-radius: 5%;
 	}	
-#words a {
+#words a, a {
 	display: inline-block;
 	text-decoration: none; 
 	border-bottom: 0.05rem solid black;
@@ -114,8 +129,8 @@ a:hover {
 			animation: fidget 0.05s infinite;
 	}
 #info {
-	font-size: 0.83rem;
-	line-height: 1.5rem;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
 	padding: 1.0rem 0 1.0rem 0;
 	margin: 0; 
 	}
@@ -131,17 +146,100 @@ a:hover {
 	padding: 1.0rem 0 1.0rem 0;
 	border: none !important;
 	}
-#downloads,
-#downloads a {
+.downloads,
+.downloads a {
 	text-align: center;
 	margin: auto;
 	font-size: 1.2rem;
 	text-decoration: none;
 	border: none !important;
 	}
-#downloads {
+.downloads {
 	padding-bottom: 2.0rem;
 }	
+#readme *:not([class*="carousel"], [id*="carousel"], [class*="screen"], [class*="lb"], [class*="cz"]) {
+	display: block;
+	margin: auto;
+	text-align: left !important;
+}
+#readme img:not([class*="carousel"], [id*="carousel"], [class*="screen"]) {
+	width: 80%;
+	height: auto;	
+}
+#readme code {
+	display: inline;
+	font-size: 0.87rem;
+}
+#readme .two-row div {
+	display: inline-block;
+	width: calc(50%);
+	margin: 0;
+	margin-right: -0.5rem; 
+	padding: 0.5rem 0 !important;
+	text-align: center !important;
+}
+#readme .two-row div:nth-child(4n+1),
+#readme .two-row div:nth-child(4n+2) {
+	background-color: rgba(128,128,128,0.07);
+}
+#readme .two-row div:nth-child(2n+1) {
+	font-weight: 700;
+}
+#readme .two-row div:nth-child(2n+2) {
+	font-size: 0.8rem;
+}
+#readme {
+	font-size: 1.0rem;
+	margin: 0;
+	padding: 0;
+}
+#readme p,
+#readme h1,
+#readme h2,
+#readme h3,
+#readme div {
+	padding-bottom: 1.0em;
+	padding-top: 1.0rem;
+}
+#readme ul, 
+#readme li {
+	font-size: 0.8rem;
+}
+#readme li::before {
+	content: "\29BF  ";	
+}
+#readme ul {
+	padding-bottom: 3.0rem;
+}
+#readme .imgcaption {
+	display: block;
+	width: calc(100% - 4.0rem);
+	padding: 2.0rem;
+	background-color: rgba(128,128,128,0.07);
+	text-align: center !important;
+	font-size: 0.86rem;
+	font-style: italic;
+	margin: 2.0rem 0;
+	border-radius: 2.0rem;
+}
+#readme h1, #readme h2 {
+	width: calc(100% - 4.0rem);
+	font-size: 2.2rem;
+	font-weight: 200;
+	background-color: rgb(42, 42, 42, 0.2);
+	border-radius: 0.5rem;
+	padding: 2.0rem;
+	margin: 2.0rem 0;
+	text-align: center;
+}
+#readme h2 {
+	font-size: 1.8rem !important;
+	font-weight: 400;
+}
+#readme h3 {
+	font-size: 1.4rem !important;
+	font-weight: 400;
+}
 
 @-webkit-keyframes fidget { /* Safari 4.0 - 8.0 */
 	0%   {top: -1px;}
