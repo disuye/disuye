@@ -38,11 +38,13 @@
 					var origItems = Array.from(track.querySelectorAll('img.screen'));
 					var itemCount = origItems.length;
 
-					for (var i = itemCount - 1; i >= 0; i--)
-						track.insertBefore(origItems[i].cloneNode(true), track.firstChild);
-					origItems.forEach(function(img){
-						track.appendChild(img.cloneNode(true));
-					});
+					for (var r = 0; r < 3; r++) {
+						for (var i = itemCount - 1; i >= 0; i--)
+							track.insertBefore(origItems[i].cloneNode(true), track.firstChild);
+						origItems.forEach(function(img){
+							track.appendChild(img.cloneNode(true));
+						});
+}
 
 					var setWidth = 0;
 
@@ -54,18 +56,18 @@
 						return w;
 					}
 
-					function wrapScroll(){
-						if (track.scrollLeft >= 2 * setWidth)
-							track.scrollLeft -= setWidth;
-						else if (track.scrollLeft < setWidth)
-							track.scrollLeft += setWidth;
-					}
-
 					function initScroll(){
 						setWidth = calcSetWidth();
 						if (!setWidth) return;
 						track.style.scrollBehavior = 'auto';
-						track.scrollLeft = setWidth;
+						track.scrollLeft = setWidth * 3;  // start in the middle
+					}
+
+					function wrapScroll(){
+						if (track.scrollLeft >= 5 * setWidth)
+							track.scrollLeft -= setWidth;
+						else if (track.scrollLeft < 2 * setWidth)
+							track.scrollLeft += setWidth;
 					}
 
 					window.addEventListener('load', initScroll);
