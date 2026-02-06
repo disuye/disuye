@@ -107,6 +107,20 @@ body, #background {
 	}
 .padding {
 	padding: 1.0rem;
+}
+.bigorange {
+	display: block;
+	text-align: center !important;
+	align-items: center;
+    justify-content: center;
+	padding: 1.0rem;
+	border-radius: 8px;
+	background-color: rgba(255, 85, 0, 0.5);
+	box-shadow: 0px 0px 16px rgba(0,0,0,0.2) inset;
+	width: calc(100% - 2.0rem) !important;
+	font-size: 1.6rem;
+	font-weight: 300;
+	margin-bottom: 1.0rem;
 }	
 #icon,
 #icon-ffab {
@@ -229,6 +243,10 @@ a:hover {
 	padding-top: 1.0rem;
 	padding-bottom: 2.0em;
 	}
+#readme h1,
+#readme h2 {
+		box-shadow: 0px 0px 26px rgba(0,0,0,0.2) inset;
+}	
 #readme ul, 
 #readme li {
 	font-size: 0.8rem;
