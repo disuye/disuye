@@ -163,18 +163,19 @@ a:hover {
 	border: none !important;
 	}
 .downloads {
-		display: block;
-		width: 100%;
-		margin: auto;
-		text-align: center !important;
-		padding-bottom: 2.0rem;
-		}	
+	display: block;
+	width: 100%;
+	margin: auto;
+	text-align: center !important;
+	padding-bottom: 2.0rem;
+	}	
 .downloads a {
 	display: inline-block;
 	font-size: 1.2rem;
 	text-decoration: none;
 	border: none !important;
 	display: inline-block !important;
+	padding: 0.5rem 0;
 }
 #readme *:not([class*="carousel"],
  [id*="carousel"],
@@ -306,6 +307,11 @@ a:hover {
   	position: relative;
   	margin: auto;
   	background: var(--glitch-bg-color);
+	word-break: keep-all;
+	white-space: nowrap;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
 	}
 
 .glitch:hover::before, 
