@@ -370,43 +370,13 @@ a:hover {
 		);
 	}
 	.glitch {
-  	display: inline-block;
-  	position: relative;
-  	margin: auto;
-  	background: var(--glitch-bg-color);
+  	background: transparent;
 	word-break: keep-all;
 	white-space: nowrap;
     word-break: keep-all;
     overflow-wrap: normal;
     hyphens: none;
 	}
-	.glitch::before, 
-	.glitch::after {
-		animation-iteration-count: infinite;
-		animation-timing-function: steps(2);
-		animation-direction: alternate-reverse;
-		overflow: hidden;
-		position: absolute;
-		top: 0;
-		clip: rect(0, 9999px, 0, 0);
-		content: attr(data-text);
-		opacity: 0.5;
-	}
-	.glitch::after {
-		animation-name: glitch-animation;
-		animation-duration: 1.9s;
-		left: 2px;
-		background: var(--glitch-bg-color);
-		text-shadow: rgb(255, 0, 115) 0 0 2px;
-		}
-
-	.glitch::before {
-		animation-name: glitch-animation-2;
-		animation-duration: 1.5s;
-		left: -2px;
-		background: var(--glitch-bg-color);
-		text-shadow: rgb(45, 255, 255) -2px 0 10px;
-		}
 	.words a {
 		border-bottom: 0;
 		position: relative;
