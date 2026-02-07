@@ -375,6 +375,11 @@ a:hover {
   	position: relative;
   	margin: auto;
   	background: var(--glitch-bg-color);
+	word-break: keep-all;
+	white-space: nowrap;
+    word-break: keep-all;
+    overflow-wrap: normal;
+    hyphens: none;
 	}
 	.glitch::before, 
 	.glitch::after {
