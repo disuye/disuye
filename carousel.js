@@ -23,17 +23,14 @@
 					var touchVelocity = 0;
 					var touchDragging = false;
 
+					document.body.appendChild(lb);
+
 					// image source list & current index
 					var carouselImgs = Array.from(track.querySelectorAll('img.screen'));
 					var readmeImgs = Array.from(document.querySelectorAll('#readme img:not(.screen)'));
-					// .filter(function(img){
-					// 	return img.naturalWidth > 100 && img.naturalHeight > 100;
-					// 	});
 					var allImgs = carouselImgs.concat(readmeImgs);
 					var srcs = allImgs.map(function(img){ return img.src; });
 					var currentIndex = 0;
-
-					document.body.appendChild(lb);
 
 					var origItems = Array.from(track.querySelectorAll('img.screen'));
 					var itemCount = origItems.length;
