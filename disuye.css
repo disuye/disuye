@@ -163,10 +163,10 @@ a:hover {
 }
 
 #info {
-	font-size: 1.2rem;
+	font-size: 1.0rem;
 	line-height: 1.8rem;
-	padding: 1.0rem 0 1.0rem 0;
-	margin: 0; 
+	padding: 2.0rem 0 2.0rem 0;
+	margin: 0;
 }
 
 #info p {
@@ -201,11 +201,13 @@ a:hover {
 }
 
 #readme code {
-	display: inline-block !important;
-	font-size: 0.87rem;
+	text-align: center !important;
+	display: block !important;
+	font-size: 1.0rem;
 	color: #ff5500;
-	background-color: rgba(42, 42, 42, 0.07);
-	padding: 0.1rem 0.5rem;
+	background-color: rgba(255,255,255,0.8);
+	box-shadow: 0px 0px 6px rgba(0,0,0,0.1) inset;
+	padding: 2.0rem;
 }
 
 #readme .two-row div {
@@ -348,7 +350,7 @@ a:hover {
 }	
 
 .biglink {
-	font-size: 1.4rem !important;
+	font-size: 1.2rem !important;
 	width: calc(100% - 2.0rem);
 	padding: 1.0rem;
 	text-decoration: none;
@@ -363,6 +365,11 @@ a:hover {
 
 .downloads {
 	margin-bottom: 2.0rem !important;
+}
+
+small {
+	font-size: 75%;
+	line-height: 180%;
 }
 
 /* GLITCH */

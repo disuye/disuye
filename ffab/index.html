@@ -70,6 +70,10 @@
 					
 					<div class="imgcaption"><img src="./readme/ffab-mode-light.png">...and psyochpath mode.</div>
 
+					<p>FFAB also simplifies the process of installing FFmpeg and companion tools FFplay &amp; FFprobe. The latest static version is fetched from an official distribution source, FFAB verifies the download (SHA-256 / MD5 sums), and installs to an easily accessible path.</p>
+
+					<div class="imgcaption"><img src="./readme/ffab-ffmpeginstall.png">FFAB will install FFmpeg, if you need it...</div>
+
 					<!--<div class="sections">
 					<a href="#section-1">App Architecture</a>
 					<a href="#section-2">Filter Chain Overview</a>
@@ -451,7 +455,7 @@
 
 				<div class="two-row">
 					<div>[`] or [A]</div>
-					<div>Open [+ Add Filter] menu</div>
+					<div>Add Filter menu</div>
 
 					<div>[↑/↓]</div>
 					<div>File List navigate</div>
@@ -475,7 +479,7 @@
 					<div>Save As</div>
 
 					<div>[\]</div>
-					<div>Toggle command formatting</div>
+					<div>Toggle formatting</div>
 				</div>
 
 				<h2 id="section-12">Audio Preview Shortcuts</h2>
@@ -484,7 +488,7 @@
 					<div>ALT+Click+Drag</div>
 					<div>Select region</div>
 
-					<div>ALT+Click (no drag)</div>
+					<div>ALT+Click</div>
 					<div>Clear region</div>
 
 					<div>SHIFT+Drag</div>
@@ -497,12 +501,20 @@
 				
 				<h2 id="section-13">Downloads &amp; Sys Reqs</h2>
 
-				<p>FFAB version 0.1.2 now ships with an FFmpeg (&amp; FFplay / FFprobe) installer. FFAB identifies your OS, gets the latest static version from one of several official sources, verifies the download (SHA-256 / MD5 sums), unpacks the ZIP file and installs into an easily accessible path.</p>
+				<div class="two-row">
+					<div>macOS</div>
+					<div>Monterey+</div>
 
-				<div class="imgcaption"><img src="./readme/ffab-ffmpeginstall.png">FFAB is able to install FFmpeg automatically...</div>
-				
-				<p>Mac users might need to run the following Terminal command to get around Apple gate-keeping:
-				<code>xattr -cr /Applications/FFAB.app</code> (Xattr runs during many brew installs and most Electron apps so it's fairly innocuous.)</p>
+					<div>Linux</div>
+					<div>x86 / ARM</div>
+
+					<div>Windows</div>
+					<div>(TBC)</div>
+				</div>
+
+				<p>Mac users might need to run the following Terminal command to get around Apple gate-keeping:</p>
+				<p><code>xattr -cr /Applications/FFAB.app</code></p>
+				<p><small>(Xattr often runs during brew installs / Electron apps, so it's fairly innocuous. But if you are unsure about the security implications, please search the web.)</small></p>
 
 				<div class="bigorange">PUBLIC BETA</div>
 
@@ -512,20 +524,8 @@
 					<a class="biglink" data-text="[linux coming soon]">[linux coming soon]</a>
 				</div>
 
-				<div class="two-row">
-					<div>macOS</div>
-					<div>Universal / Monterey +</div>
-
-					<div>Linux</div>
-					<div>(TBC)</div>
-
-					<div>Windows</div>
-					<div>(TBC)</div>
-				</div>
-				
+				<div id="icon-ffab"></div>
 				<div class="padding"></div>
-			<div id="icon-ffab"></div>
-			<div class="padding"></div>
 			
 		</div>
 			
