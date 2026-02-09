@@ -31,9 +31,10 @@
 			<div class="bigorange">PUBLIC BETA</div>
 					
 			<div class="downloads">
-					<a href="./downloads/FFABv0.1.4.dmg" class="biglink" data-text="[macOS_FFABv0.1.4.dmg]">[macOS_FFABv0.1.4.dmg]</a>
-					<a href="./downloads/FFAB-demo-presets.zip" class="biglink" data-text="[FFAB-demo-presets.zip]">[FFAB-demo-presets.zip]</a>
-					<a class="biglink" data-text="[linux coming soon]">[linux coming soon]</a>
+					<a href="./downloads/FFABv0.1.4.dmg" class="biglink" data-text="[macOS Universal Binary]">[macOS Universal Binary]</a>
+					<a href="./downloads/FFAB-arm64v0.1.4.AppImage.zip" class="biglink" data-text="[Linux ARM64]">[Linux ARM64]</a>
+					<a href="./downloads/FFAB-x86_64v0.1.4.AppImage.zip" class="biglink" data-text="[Linux x86_64]">[Linux x86_64]</a>
+					<a href="./downloads/FFAB-demo-presets.zip" class="biglink" data-text="[FFAB Demo Files]">[FFAB Demo Files]</a>
 			</div>
 	
 			<div id="readme">
@@ -512,16 +513,21 @@
 					<div>(TBC)</div>
 				</div>
 
-				<p>Mac users might need to run the following Terminal command to get around Apple gate-keeping:</p>
+				<p><b>Mac</b>Users will probably need run the following Terminal command to get around Apple gate-keeping:</p>
 				<p><code>xattr -cr /Applications/FFAB.app</code></p>
 				<p><small>(Xattr often runs during brew installs / Electron apps, so it's fairly innocuous. But if you are unsure about the security implications, please search the web.)</small></p>
+
+				<p><b>Linux</b>Users will probably need to run the following Terminal command to get real-time audio previews to work:</p>
+				<p><code>GST_PLUGIN_SYSTEM_PATH=/usr/lib/$(uname -m)-linux-gnu/gstreamer-1.0 ./FFAB-x86_64v0.1.4.AppImage</code></p>
+				<p><small>(This is related to a GStreamer-bundling rabbit hole I don't have time for right now. But if someone in the Linux community wants to tidy this up, email me.)</small></p>
 
 				<div class="bigorange">PUBLIC BETA</div>
 
 				<div class="downloads">
-					<a href="./downloads/FFABv0.1.4.dmg" class="biglink" data-text="[macOS_FFABv0.1.4.dmg]">[macOS_FFABv0.1.4.dmg]</a>
-					<a href="./downloads/FFAB-demo-presets.zip" class="biglink" data-text="[FFAB-demo-presets.zip]">[FFAB-demo-presets.zip]</a>
-					<a class="biglink" data-text="[linux coming soon]">[linux coming soon]</a>
+					<a href="./downloads/FFABv0.1.4.dmg" class="biglink" data-text="[macOS Universal Binary]">[macOS Universal Binary]</a>
+					<a href="./downloads/FFAB-arm64v0.1.4.AppImage.zip" class="biglink" data-text="[Linux ARM64]">[Linux ARM64]</a>
+					<a href="./downloads/FFAB-x86_64v0.1.4.AppImage.zip" class="biglink" data-text="[Linux x86_64]">[Linux x86_64]</a>
+					<a href="./downloads/FFAB-demo-presets.zip" class="biglink" data-text="[FFAB Demo Files]">[FFAB Demo Files]</a>
 				</div>
 
 				<div id="icon-ffab"></div>
