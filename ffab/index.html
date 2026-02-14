@@ -81,6 +81,7 @@
 					<a href="#section-2">Filter Chain Overview</a>
 					<a href="#section-3">Audio Filters</a>
 					<a href="#section-4">Input / Output</a>
+					<a href="#section-4b">View Log &amp; Log File</h2>
 					<a href="#section-5">Audio Previews</a>
 					<a href="#section-6">Batch Processing Modes</a>
 					<a href="#section-7">Special Filters</a>
@@ -203,6 +204,14 @@
 						<li>Channels (mono, stereo, surround)</li>
 						<li>Bitrate (kbps)</li>
 					</ul>
+
+					<h2 id="section-4b">View Log &amp; Log File</h2>
+
+					<p>From the Settings panel, configure the Log Level and Log File options. Logging is useful for debugging FFmpeg issues, or capturing analysis data from Astats etc.</p>
+
+					<div class="imgcaption"><img src="./readme/ffab-viewlog.png">Real-time preview of FFmpeg log data</div>
+					<div class="imgcaption"><img src="./readme/ffab-loglevel.png">Choose the amount of logging you need...</div>
+					<div class="imgcaption"><img src="./readme/ffab-logfile.png">... and where to save the log data</div>
 
 					<h2 id="section-5">Audio Previews</h2>
 					<p>Instant audio preview of FFmpeg filter chains,  plus a helpful waveform image and scrub playhead. Highlight any audio file in the Main File List, click [Generate Preview] in either the main app window or from within the larger pop-out Audio Preview window, then press [Play].</p> <p>Or, lean into the key command combo of [↑/↓] in the File List, [←] to generate preview files  then [→] to play audio.</p>
@@ -386,6 +395,7 @@
 
 				<ul>
 					<li>View Command: Raw FFmpeg command string, optional syntax highlighting</li>
+					<li>View Log: FFmpeg and analysis / stderr output window and also save file</li>
 					<li>Audio Preview: Pop-out &amp; extended version of the Generate Preview player</li>
 					<li>Batch Settings: Comprehensive process controls &amp; output verification</li>
 				</ul>
