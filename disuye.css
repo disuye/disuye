@@ -232,6 +232,14 @@ a:hover {
 	font-size: 0.8rem;
 }
 
+#readme .two-row.install div:nth-child(2n+1) {
+	width: calc(34%);
+}
+
+#readme .two-row.install div:nth-child(2n+2) {
+	width: calc(66%);
+}
+
 #readme {
 	font-size: 1.0rem;
 	margin: 0;
