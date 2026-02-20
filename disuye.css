@@ -195,6 +195,12 @@ a:hover {
 		text-align: left;
 }
 
+.inlinelink {
+	all: unset;
+	display: inline !important;
+	text-decoration: underline;
+}
+
 #readme img:not([class*="carousel"], [id*="carousel"], [class*="screen"]) {
 	width: 80%;
 	height: auto;	
