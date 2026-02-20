@@ -22,20 +22,46 @@
 			<div id="icon-ffab"></div>
 			<div>FFAB</div>
 			<div style="padding-top:0.6rem;">FFmpeg Audio Batch</div>
-			<div><span style="font-size: 0.7rem; font-weight: 500;">Current Version: 0.1.11 | 2026-02-18</span></div>
+			<div><span style="font-size: 0.7rem; font-weight: 500;">Current Version: 1.0.1 | 2026-02-20</span></div>
 			<div id="info">
 					<p>FFAB is a cross-platform, complex audio batch processor, effects rack, command builder &amp; graphical user interface for the glorious <a href="https://ffmpeg.org/download.html" class="glitch" data-text="FFmpeg">FFmpeg</a>.</p>
 					<p>But only the sound related stuff.</p>
 					<p>FFAB is for musicians, sound engineers, media archivists, sonic artists, mental experimentalists, or anyone curious enough to collide thousands of files together into one hot mess.</p>
 			</div>
 
-			<div class="bigorange">PUBLIC BETA</div>
-					
+
+			<div id="readme">
+			<div class="bigorange">NEWS</div>
+
+			<p>FFAB is no longer in public beta! Thanks to everyone who helped troubleshoot issues. Stable version 1.0 available now.</p>
+
+			<div class="imgcaption"><img src="./news/ffabv101.png">Version 1.0 now available...</div>
+
+			<p>FFAB's audio routing logic has been completely redone for v1.0... what began a few months ago as 'conditional soup' is now a fully structured DAG aka Directed Acyclic Graph. Which means some pretty cool UI features are possible.</p>
+			
+			<p>User presets created in the beta version should load OK into v1.0 in almost all cases. Follow the Installation Info commands linked below, and delete your plist / preferences file before running the new version.</p>
+
+			<h3>Significant v1.0 Changes</h3>
+			<ul>
+				<li>completely new audio stream routing logic -> Directed Acyclic Graph</li>
+				<li>rescan audio metadata -> faster, no UI lag, no errors</li>
+				<li>automatic update check -> ping github repo weekly</li>
+				<li>new filters added -> audio to waveform PNG & audio to spectrogram PNG</li>
+				<li>real-time FFmpeg log window -> during process, batch & preview</li>
+				<li>save complete FFmpeg logs to <a class="inlinelink" href="./news/ffab-demo-log.txt">TXT file</a></li>
+				<li>logic bugs fixed –> mainly ASPLIT / sub-chain / sidechain related</li>
+				<li>UI bugs fixed –> swapping unicode for SVGs</li>
+				<li>AFIR / Convolution IR is back -> oops, I broke it by mistake</li>
+			</ul>
+			<div class="imgcaption"><img src="./news/ffab-demo-spectrogram.png">Audio analysis filters now available...</div>
+			<div><p></p></div>
+
+			<div class="bigorange">DOWNLOADS</div>
 			<div class="downloads">
 					<a href="#section-13" class="biglink">Installation Info</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv0.1.11/FFABv0.1.11.dmg" class="biglink">[macOS Universal Binary]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv0.1.11/ffab-linux-arm64v0.1.11.zip" class="biglink">[Linux ARM64]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv0.1.11/ffab-linux-x86_64v0.1.11.zip" class="biglink">[Linux x86_64]</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/FFABv1.0.1.dmg" class="biglink">[macOS Universal Binary]</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-arm64v1.0.1.zip" class="biglink">[Linux ARM64]</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-x86_64v1.0.1.zip" class="biglink">[Linux x86_64]</a>
 					<!--<a href="./downloads/demo/FFAB-demo-presets.zip" class="biglink">[FFAB Demo Files]</a>-->
 			</div>
 	
@@ -49,13 +75,14 @@
 					<div class="carousel-wrap" id="carouselWrap">
 						<div class="carousel-zone left" id="czL"><span class="carrow">&larr;</span></div>
 						<div class="carousel-zone right" id="czR"><span class="carrow">&rarr;</span></div>
-							<div class="carousel-track" id="carouselTrack">
-								<img src="./readme/ffab-photo1.png" class="screen">
-								<img src="./readme/ffab-photo2.png" class="screen">
-								<img src="./readme/ffab-photo3.png" class="screen">
-								<img src="./readme/ffab-photo4.png" class="screen">
-								<img src="./readme/ffab-photo5.png" class="screen">
-								<img src="./readme/ffab-photo6.png" class="screen">
+						<div class="carousel-track" id="carouselTrack">
+							<img src="./news/ffabv101d.png" class="screen">
+							<img src="./readme/ffab-photo1.png" class="screen">
+							<img src="./readme/ffab-photo2.png" class="screen">
+							<img src="./readme/ffab-photo3.png" class="screen">
+							<img src="./readme/ffab-photo4.png" class="screen">
+							<img src="./readme/ffab-photo5.png" class="screen">
+							<img src="./readme/ffab-photo6.png" class="screen">
 							</div>
 					</div>
 				
@@ -415,7 +442,7 @@
 					<li>Theme-aware waveform and UI elements</li>
 				</ul>
 
-				<h2 id="section-9">Command Building</h2>
+				<!--<h2 id="section-9">Command Building</h2>
 
 				<p>Filter Chain commands build with these key methods. API breakout not fully implemented but in progress.</p>
 
@@ -441,7 +468,7 @@
 					<li>BatchProcessor calls buildCompleteCommand()</li>
 					<li>MainWindow calls buildCompleteCommand() for View Command</li>
 					<li>				PreviewGenerator calls buildPreviewCommand() for audio preview</li>
-				</ul>
+				</ul>-->
 
 				<h2 id="section-10">Preset System</h2>
 
@@ -517,29 +544,28 @@
 					<div>Universal / Monterey+</div>
 
 					<div>Linux</div>
-					<div>Ubuntu 24 / x86 & ARM</div>
+					<div>x86 & ARM / Ubuntu 24</div>
 
 					<div>Windows</div>
 					<div>(TBC)</div>
 				</div>
-
+				<p></p>
 				<p><b>Mac</b>Users will probably need to run the following Terminal command to get around Apple gate-keeping:</p>
 				<p><code>xattr -cr /Applications/FFAB.app</code></p>
 				<p><small>(Xattr often runs during brew installs / Electron apps, so it's fairly innocuous. But if you are unsure about the security implications, please search the web.)</small></p>
 
 				<p><b>Linux</b>Users will probably need to run the following Terminal command to get real-time audio previews to work:</p>
-				<p><code>GST_PLUGIN_SYSTEM_PATH=/usr/lib/$(uname -m)-linux-gnu/gstreamer-1.0 ./FFAB_version_.AppImage</code></p>
+				<p><code>GST_PLUGIN_SYSTEM_PATH=/usr/lib/$(uname -m)-linux-gnu/gstreamer-1.0 ./FFAB-main-linux-PLATFORM.AppImage</code></p>
 				<p><small>(This is related to a GStreamer-bundling rabbit hole I don't have time for right now. But if someone in the Linux community wants to tidy this up, email me.)</small></p>
 
 				<p><b>Windows</b>Contact me (email below) if you are willing to build &amp; test for the Windows community. Must have prior Qt 6.7.3 / 6.10.1 / CMake / windeployqt app experience (quirks galore!) but FFAB has no troublesome dependencies, and FFmpeg is not bundled.</p>
 
-				<div class="bigorange">PUBLIC BETA</div>
+				<div class="bigorange">DOWNLOADS</div>
 
 				<div class="downloads">
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv0.1.11/FFABv0.1.11.dmg" class="biglink">[macOS Universal Binary]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv0.1.11/ffab-linux-arm64v0.1.11.zip" class="biglink">[Linux ARM64]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv0.1.11/ffab-linux-x86_64v0.1.11.zip" class="biglink">[Linux x86_64]</a>
-					<a href="./downloads/demo/FFAB-demo-presets.zip" class="biglink">[FFAB Demo Files]</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/FFABv1.0.1.dmg" class="biglink">[macOS Universal Binary]</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-arm64v1.0.1.zip" class="biglink">[Linux ARM64]</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-x86_64v1.0.1.zip" class="biglink">[Linux x86_64]</a>
 				</div>
 
 				<div id="icon-ffab"></div>

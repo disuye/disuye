@@ -1,0 +1,119 @@
+# FFAB Log — batch — 2026-02-20 14:57:15 — 1 files
+# filename	timestamp	output
+130 Astonishing Live.wav	14:57:15	[aist#0:0/pcm_s16le @ 0x7fdf1cf0b3c0] Guessed Channel Layout: stereo
+130 Astonishing Live.wav	14:57:15	Input #0, wav, from '/Users/disuye/Music/Disuye Sample Library/Audio Samples/__SMPLR_REPO/BT Breakz/130 Astonishing Live.wav':
+130 Astonishing Live.wav	14:57:15	Duration: 00:00:07.38, bitrate: 1411 kb/s
+130 Astonishing Live.wav	14:57:15	Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+130 Astonishing Live.wav	14:57:15	[aist#1:0/pcm_s16le @ 0x7fdf1cf0fd80] Guessed Channel Layout: stereo
+130 Astonishing Live.wav	14:57:15	Input #1, wav, from '/Users/disuye/_FFABsource/_FFABmini/Mode_07-norm.wav':
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	encoder         : Lavf62.3.100
+130 Astonishing Live.wav	14:57:15	Duration: 00:00:01.50, bitrate: 1536 kb/s
+130 Astonishing Live.wav	14:57:15	Stream #1:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s16, 1536 kb/s
+130 Astonishing Live.wav	14:57:15	Stream mapping:
+130 Astonishing Live.wav	14:57:15	Stream #0:0 (pcm_s16le) -> astats:default
+130 Astonishing Live.wav	14:57:15	Stream #1:0 (pcm_s16le) -> anequalizer:default
+130 Astonishing Live.wav	14:57:15	asplit -> Stream #0:0 (pcm_s24le)
+130 Astonishing Live.wav	14:57:15	asplit -> Stream #1:0 (pcm_s24le)
+130 Astonishing Live.wav	14:57:15	showwavespic:default -> Stream #2:0 (png)
+130 Astonishing Live.wav	14:57:15	showspectrumpic:default -> Stream #3:0 (png)
+130 Astonishing Live.wav	14:57:15	Press [q] to stop, [?] for help
+130 Astonishing Live.wav	14:57:15	Output #0, wav, to '/Users/disuye/Desktop/FFABOutput/130 Astonishing Live_0000.wav':
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	ISFT            : Lavf62.3.100
+130 Astonishing Live.wav	14:57:15	Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	encoder         : Lavc62.11.100 pcm_s24le
+130 Astonishing Live.wav	14:57:15	Output #1, wav, to '/Users/disuye/Desktop/FFABOutput/130 Astonishing Live_0006.wav':
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	ISFT            : Lavf62.3.100
+130 Astonishing Live.wav	14:57:15	Stream #1:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 48000 Hz, stereo, s32 (24 bit), 2304 kb/s
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	encoder         : Lavc62.11.100 pcm_s24le
+130 Astonishing Live.wav	14:57:15	Output #2, image2, to '/Users/disuye/Desktop/FFABOutput/130 Astonishing Live_0009-waveform.png':
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	encoder         : Lavf62.3.100
+130 Astonishing Live.wav	14:57:15	Stream #2:0: Video: png, rgba(pc, gbr/unknown/unknown, progressive), 2048x1024 [SAR 1:1 DAR 2:1], q=2-31, 200 kb/s, 1 fps, 1 tbn
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	encoder         : Lavc62.11.100 png
+130 Astonishing Live.wav	14:57:15	Output #3, image2, to '/Users/disuye/Desktop/FFABOutput/130 Astonishing Live_0004-spectrum.png':
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	encoder         : Lavf62.3.100
+130 Astonishing Live.wav	14:57:15	Stream #3:0: Video: png, rgb24(pc, gbr/unknown/unknown, progressive), 2332x1152 [SAR 1:1 DAR 583:288], q=2-31, 200 kb/s, 1 fps, 1 tbn
+130 Astonishing Live.wav	14:57:15	Metadata:
+130 Astonishing Live.wav	14:57:15	encoder         : Lavc62.11.100 png
+130 Astonishing Live.wav	14:57:15	frame=    0 fps=0.0 q=0.0 q=0.0 size=    3072KiB time=N/A bitrate=N/A speed=N/A elapsed=0:00:00.18    [Parsed_astats_0 @ 0x7fdf1d806780] Channel: 1
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] DC offset: 0.000004
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Min level: -32768.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Max level: 32767.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Min difference: 0.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Max difference: 24660.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Mean difference: 662.688851
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS difference: 1175.766618
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Peak level dB: 0.000265
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS level dB: -15.224290
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS peak dB: -10.879307
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS through dB: -24.640952
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Crest factor: 5.770690
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Flat factor: 11.514621
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Peak count: 34
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Abs Peak count: 17
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Noise floor dB: -20.565966
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Noise floor count: 56
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Entropy: 0.868078
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Bit depth: 16/16/16/16
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Dynamic range: 96.329599
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Zero crossings: 21231
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Zero crossings rate: 0.065193
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Channel: 2
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] DC offset: -0.000039
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Min level: -32768.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Max level: 32767.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Min difference: 0.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Max difference: 20651.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Mean difference: 712.323321
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS difference: 1223.808898
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Peak level dB: 0.000265
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS level dB: -14.485230
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS peak dB: -10.368264
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS through dB: -23.299313
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Crest factor: 5.299987
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Flat factor: 25.992353
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Peak count: 231
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Abs Peak count: 21
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Noise floor dB: -17.114212
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Noise floor count: 1249
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Entropy: 0.877017
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Bit depth: 16/16/16/16
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Dynamic range: 96.329599
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Zero crossings: 21083
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Zero crossings rate: 0.064739
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Overall
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] DC offset: -0.000039
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Min level: -32768.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Max level: 32767.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Min difference: 0.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Max difference: 24660.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Mean difference: 687.506086
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS difference: 1200.028199
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Peak level dB: 0.000265
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS level dB: -14.839058
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS peak dB: -10.368264
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] RMS through dB: -24.640952
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Flat factor: 25.037813
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Peak count: 132.500000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Abs Peak count: 19.000000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Noise floor dB: -17.114212
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Noise floor count: 652.500000
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Entropy: 0.872547
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Bit depth: 16/16/16/16
+130 Astonishing Live.wav	14:57:15	[Parsed_astats_0 @ 0x7fdf1d806780] Number of samples: 325662
+130 Astonishing Live.wav	14:57:15	[image2 @ 0x7fdf1cf12ac0] The specified filename '/Users/disuye/Desktop/FFABOutput/130 Astonishing Live_0009-waveform.png' does not contain an image sequence pattern or a pattern is invalid.
+130 Astonishing Live.wav	14:57:15	[image2 @ 0x7fdf1cf12ac0] Use a pattern such as %03d for an image sequence or use the -update option (with -frames:v 1 if needed) to write a single image.
+130 Astonishing Live.wav	14:57:16	[image2 @ 0x7fdf1cf149c0] The specified filename '/Users/disuye/Desktop/FFABOutput/130 Astonishing Live_0004-spectrum.png' does not contain an image sequence pattern or a pattern is invalid.
+130 Astonishing Live.wav	14:57:16	[image2 @ 0x7fdf1cf149c0] Use a pattern such as %03d for an image sequence or use the -update option (with -frames:v 1 if needed) to write a single image.
+130 Astonishing Live.wav	14:57:16	[out#0/wav @ 0x7fdf1cf0dcc0] video:0KiB audio:3202KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.003111%
+130 Astonishing Live.wav	14:57:16	[out#1/wav @ 0x7fdf1cf10c80] video:0KiB audio:3202KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: 0.003111%
+130 Astonishing Live.wav	14:57:16	[out#2/image2 @ 0x7fdf1cf129c0] video:29KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+130 Astonishing Live.wav	14:57:16	[out#3/image2 @ 0x7fdf1cf148c0] video:2822KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+130 Astonishing Live.wav	14:57:16	frame=    1 fps=0.0 q=-0.0 Lq=-0.0 size=    3202KiB time=00:00:01.00 bitrate=26231.0kbits/s speed=2.27x elapsed=0:00:00.43
