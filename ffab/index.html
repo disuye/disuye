@@ -12,6 +12,7 @@
 	<div>
 		<div id="background">
 		</div>
+		<div id="banner"></div>
 		<div id="yo"><a href="../" data-text="(⊙෴☉)" style="float:left;padding-left:1.0rem;">(⊙෴☉)</a><a style="float:right;padding-right:1.0rem;" href="#" id="em" 
    data-u="ffab" 
    data-d="disuye.com"
@@ -20,17 +21,28 @@
    onfocus="this.href='mailto:'+this.dataset.u+'@'+this.dataset.d">EMAIL</a></div>
 		<div id="ffab">
 			<div id="icon-ffab"></div>
-			<div>FFAB</div>
-			<div style="padding-top:0.6rem;">FFmpeg Audio Batch</div>
-			<div><span style="font-size: 0.7rem; font-weight: 500;">Current Version: 1.0.1 | 2026-02-20</span></div>
+			<div id="name">FFAB</div>
+			<div id="fullname">FFmpeg Audio Batch</div>
+			<div id="version">Current Version: 1.0.1 | 2026-02-20</div>
 			<div id="info">
 					<p>FFAB is a cross-platform, complex audio batch processor, effects rack, command builder &amp; graphical user interface for the glorious <a href="https://ffmpeg.org/download.html" class="glitch" data-text="FFmpeg">FFmpeg</a>.</p>
 					<p>But only the sound related stuff.</p>
 					<p>FFAB is for musicians, sound engineers, media archivists, sonic artists, mental experimentalists, or anyone curious enough to collide thousands of files together into one hot mess.</p>
 			</div>
 
-
 			<div id="readme">
+	
+			<div class="bigorange">DOWNLOADS</div>
+			<div class="downloads">
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/FFABv1.0.1.dmg" class="biglink">macOS 12+</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-x86_64v1.0.1.zip" class="biglink">Linux x86</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-arm64v1.0.1.zip" class="biglink">Linux ARM</a>
+					<div id="command">
+						<p>Apple Gatekeeper will stop FFAB from running on Sequoia and Tahoe, use this Terminal command:<code onclick="navigator.clipboard.writeText(this.innerText)" style="cursor:pointer" title="Click to copy">xattr -cr /Applications/FFAB.app</code></p>
+						<p>Some versions of Linux require launching FFAB via this Terminal command, to enable audio previews:<code onclick="navigator.clipboard.writeText(this.innerText)" style="cursor:pointer" title="Click to copy">GST_PLUGIN_SYSTEM_PATH=/usr/lib/$(uname -m)-linux-gnu/gstreamer-1.0 ./FFAB-main-linux-PLATFORM.AppImage</code></p>
+					</div>
+			</div>
+
 			<div class="bigorange">NEWS</div>
 
 			<p>FFAB is no longer in public beta! Thanks to everyone who helped troubleshoot issues. Stable version 1.0 available now.</p>
@@ -55,17 +67,7 @@
 			</ul>
 			<div class="imgcaption"><img src="./news/ffab-demo-spectrogram.png">Audio analysis filters now available...</div>
 			<div><p></p></div>
-
-			<div class="bigorange">DOWNLOADS</div>
-			<div class="downloads">
-					<a href="#section-13" class="biglink">Installation Info</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/FFABv1.0.1.dmg" class="biglink">[macOS Universal Binary]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-arm64v1.0.1.zip" class="biglink">[Linux ARM64]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-x86_64v1.0.1.zip" class="biglink">[Linux x86_64]</a>
-					<!--<a href="./downloads/demo/FFAB-demo-presets.zip" class="biglink">[FFAB Demo Files]</a>-->
-			</div>
 	
-			<div id="readme">
 				<h1>FFAB Overview</h1>
 
 					<p>FFAB is a GUI wrapper for FFmpeg that makes designing complex audio filter chains easily accessible to non-command-line users. Real-time preview. Drag & drop filters. Parallel processing, the works.</p>
@@ -547,26 +549,20 @@
 					<div>x86 & ARM / Ubuntu 24</div>
 
 					<div>Windows</div>
-					<div>(TBC)</div>
+					<div>10+</div>
 				</div>
-				<p></p>
-				<p><b>Mac</b>Users will probably need to run the following Terminal command to get around Apple gate-keeping:</p>
-				<p><code>xattr -cr /Applications/FFAB.app</code></p>
-				<p><small>(Xattr often runs during brew installs / Electron apps, so it's fairly innocuous. But if you are unsure about the security implications, please search the web.)</small></p>
+				<p>Contact me (email below) if you are willing to build &amp; test for the Windows community. Must have prior Qt 6.7.3 / windeployqt experience.</p>
 
-				<p><b>Linux</b>Users will probably need to run the following Terminal command to get real-time audio previews to work:</p>
-				<p><code>GST_PLUGIN_SYSTEM_PATH=/usr/lib/$(uname -m)-linux-gnu/gstreamer-1.0 ./FFAB-main-linux-PLATFORM.AppImage</code></p>
-				<p><small>(This is related to a GStreamer-bundling rabbit hole I don't have time for right now. But if someone in the Linux community wants to tidy this up, email me.)</small></p>
-
-				<p><b>Windows</b>Contact me (email below) if you are willing to build &amp; test for the Windows community. Must have prior Qt 6.7.3 / 6.10.1 / CMake / windeployqt app experience (quirks galore!) but FFAB has no troublesome dependencies, and FFmpeg is not bundled.</p>
-
-				<div class="bigorange">DOWNLOADS</div>
-
-				<div class="downloads">
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/FFABv1.0.1.dmg" class="biglink">[macOS Universal Binary]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-arm64v1.0.1.zip" class="biglink">[Linux ARM64]</a>
-					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-x86_64v1.0.1.zip" class="biglink">[Linux x86_64]</a>
-				</div>
+			<div class="bigorange">DOWNLOADS</div>
+			<div class="downloads">
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/FFABv1.0.1.dmg" class="biglink">macOS 12+</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-x86_64v1.0.1.zip" class="biglink">Linux x86</a>
+					<a href="https://github.com/disuye/FFAB-releases/releases/download/FFABv1.0.1/ffab-linux-arm64v1.0.1.zip" class="biglink">Linux ARM</a>
+					<div id="command">
+						<p>Apple Gatekeeper will stop FFAB from running on Sequoia and Tahoe, use this Terminal command:<code onclick="navigator.clipboard.writeText(this.innerText)" style="cursor:pointer" title="Click to copy">xattr -cr /Applications/FFAB.app</code></p>
+						<p>Some versions of Linux require launching FFAB via this Terminal command, to enable audio previews:<code onclick="navigator.clipboard.writeText(this.innerText)" style="cursor:pointer" title="Click to copy">GST_PLUGIN_SYSTEM_PATH=/usr/lib/$(uname -m)-linux-gnu/gstreamer-1.0 ./FFAB-main-linux-PLATFORM.AppImage</code></p>
+					</div>
+			</div>
 
 				<div id="icon-ffab"></div>
 				<div class="padding"></div>
