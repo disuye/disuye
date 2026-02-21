@@ -45,6 +45,42 @@ body, #background {
 	text-align: center;
 }
 
+#banner {
+	display: block;
+	z-index: 0;
+	position: absolute;
+	top: 0;	left: 0;
+	width: 100vw;
+	height: 18rem;
+	background: linear-gradient(rgba(255, 85, 0, 0.63), rgba(0,0,0,0.8)), url(./ffab/readme/ffab-photo2.png);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#name, 
+#fullname {
+	color: #FFFFFF;
+}
+
+#fullname {
+	padding-top: 0.6rem;
+}
+
+#version {
+	padding-top: 1.0rem; 
+	font-size: 0.7rem; 
+	font-weight: 500;
+	color: #ff5500;
+}
+#command {
+	padding-top: 2.0rem;
+}
+
+#command p {
+	font-size: 0.8rem;;
+}
+
 #yo {
 	display: block;
 	z-index: 100;
@@ -209,7 +245,7 @@ a:hover {
 #readme code {
 	text-align: center !important;
 	display: block !important;
-	font-size: 1.0rem;
+	font-size: 0.9rem;
 	color: #ff5500;
 	background-color: rgba(255,255,255,0.8);
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.1) inset;
@@ -364,17 +400,19 @@ a:hover {
 }	
 
 .biglink {
+	display: inline-block !important;
 	font-size: 1.2rem !important;
-	width: calc(100% - 2.0rem);
+	width: calc(31% - 2.0rem);
 	padding: 1.0rem;
 	text-decoration: none;
 	border: none !important;
 	text-align: center !important;
+	background-color: rgba(255, 85, 0, 0.1);
+	border-radius: 0.5rem;
 }
 .biglink:hover {
 	background-color: rgba(255, 85, 0, 0.5);
 	box-shadow: 0px 0px 16px rgba(0,0,0,0.2) inset;
-	border-radius: 0.5rem;
 }
 
 .downloads {
