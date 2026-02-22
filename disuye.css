@@ -256,10 +256,12 @@ a:hover {
 }
 
 #tt1, #tt2, #tt3 {
+	display: block;
+	position: relative;
 	border: 2px solid transparent;
 	border-radius: 0.5rem;
 	padding: 1.0rem;
-	transition: border 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
 	box-shadow: 0px 0px 6px rgba(0,0,0,0.1) inset;
 }
 
@@ -268,7 +270,13 @@ a:hover {
 .downloads:has(#t3:hover) #tt2 {
 	border: 2px solid #FF5500;
 	border-radius: 0.5rem;
-	background-color: rgb(255, 85, 0, 0.1);
+	background-color: rgba(255, 85, 0, 0.1);
+}
+
+.downloads:has(#t1:hover) #tt2,
+.downloads:has(#t2:hover) #tt1,
+.downloads:has(#t3:hover) #tt1 {
+	opacity: 0.2;
 }
 
 #readme .two-row div {
