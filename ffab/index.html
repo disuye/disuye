@@ -13,14 +13,24 @@
 		<div id="background">
 		</div>
 		<div id="banner"></div>
-		<div id="yo"><a href="../" data-text="(⊙෴☉)" style="float:left;padding-left:1.0rem;">(⊙෴☉)</a><a href="http://theinfinitealbum.com">The Infinite Album</a><a style="float:right;padding-right:1.0rem;" href="#" id="em" 
-   data-u="ffab" 
-   data-d="disuye.com"
-   onmouseover="this.href='mailto:'+this.dataset.u+'@'+this.dataset.d"
-   ontouchstart="this.href='mailto:'+this.dataset.u+'@'+this.dataset.d"
-   onfocus="this.href='mailto:'+this.dataset.u+'@'+this.dataset.d">EMAIL</a>
-   <a style="float:right;padding-right:1.0rem;text-transform: capitalize;margin-top:2px;margin-bottom:-10px;" href="https://www.github.com/disuye/ffab/"><img src="/images/GitHub.svg" height="24px"></a>
-	</div>
+			<div id="yo">
+				<div style="float:left;padding-left:1.0rem;">
+					<a href="../" data-text="(⊙෴☉)">(⊙෴☉)</a>
+				</div>
+				
+				<a href="http://theinfinitealbum.com"><small>The Infinite Album</small></a>
+				
+				<div style="float:right;padding-right:1.0rem;">
+					<a href="./press/FFAB-EPK.pdf" data-text="EPK PDF">EPK</a>
+					<a style="" href="https://www.github.com/disuye/ffab/"><img src="../images/GitHub.svg" height="24px" style="vertical-align:text-bottom;"></a>
+					<a href="#" id="em" 
+						data-u="ffab" 
+						data-d="disuye.com"
+						onmouseover="this.href='mailto:'+this.dataset.u+'@'+this.dataset.d"
+						ontouchstart="this.href='mailto:'+this.dataset.u+'@'+this.dataset.d"
+						onfocus="this.href='mailto:'+this.dataset.u+'@'+this.dataset.d">EMAIL</a>
+				</div>
+			</div>
 		<div id="ffab">
 			<div id="icon-ffab"></div>
 			<div id="name">FFAB</div>
@@ -265,6 +275,10 @@
 				<h2 id="section-6">Batch Processing Modes</h2>
 
 				<p>The underlying concept of FFAB is fast and painless audio batch processing, either for utility or purely creative reasons.</p>
+
+				<p>Before explaining FFAB's batch algorithms, be aware that FFAB can also be configured to launch as many instances of FFmpeg that your CPU will handle!</p>
+
+				<div class="imgcaption"><img src="./readme/ffab-ffmpeg-instances.png">Launch 100x FFmpeg instances? Sure!</div>
 
 				<div class="row">
 					<h3>#1 Sequential</h3>
