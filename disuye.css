@@ -216,7 +216,8 @@ a:hover {
 	word-break: keep-all;
 }
 
-#info a {
+#info a,
+#info span {
 	display: inline !important;
 }
 
